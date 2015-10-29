@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to use Middleware in NodeJS (ExpressJS example)</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="Learn how to build some basic middleware in NodeJS (with Express)">
+    <meta name="keywords" content="nodejs, middleware, express, js">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="How to use Middleware in NodeJS (ExpressJS example)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/05/29/Middleware_in_NodeJS/index.html" />
+    <meta property="og:description" content="Learn how to build some basic middleware in NodeJS (with Express)" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/05/29/Middleware_in_NodeJS/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">29 </span>May</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">How to use Middleware in NodeJS (ExpressJS example)</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="https://github.com/cj3kim">Chris Kim</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">NodeJS  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-05-29
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>From a web development perspective, middleware is a pipe (or series of pipes) that can read, update, or respond to in-transit HTTP requests before they reach their intended destination/route (ie. HTTP GET Request to <a href="www.example.com/about">www.example.com/about</a>). If you understand how it works, you can do infinitely fun and useful things with it.</p>
+<p>In <a href="http://expressjs.com">ExpressJS</a>, we can register custom or prebuilt middleware functions to the application as a callback with the <code>use()</code> method. Note that middleware functions take a <code>request</code>, <code>response</code>, and <code>next</code> object as parameters. I will explain what <code>next</code> does later.</p>
+<p>Let’s start with an example. When someone visits <a href="www.example.com">www.example.com</a> their request will be handled by the route below.</p>
+<pre class="highlight"><code class="hljs javascript">app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  fs.readFile(<span class="hljs-string">'./views/index.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, data)</span> </span>{
+    res.send(data.toString());
+  });
+});
+</code></pre>
+<p>But, before the request is sent to that route, it will first go through our middleware function.</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> randomString = <span class="hljs-string">"Chris-"</span>;
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middleware"</span>);
+  next();
+});
+</code></pre>
+<p>In the above example, I wrote middleware that assigns ‘randomString’ to <code>res.random</code>. I then pass the request/response objects onto the next middleware/route in queue by calling <code>next</code>. If I do not call <code>next</code>, the request/response objects will not be passed on and now more middleware will be triggered.</p>
+<p>The <code>use</code> method takes two parameters; an optional <code>path</code> and middleware
+function. By default, if you do not set the <code>path</code> option, all requests
+will be processed by the middleware. If you decided to assign path a value,
+only requests with a Request-URI header will be processed for the related middleware function.</p>
+<p>If you want only one middleware function to trigger for a specific route, make sure to call <code>use(path, yourMiddleware)</code> first before any others. Express will generate a chain of middleware that your request will go through based on the order of <code>use</code> calls.</p>
+<p>Let’s go through another example to hammer it in:</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+<span class="hljs-comment">//more middleware here similar to the ones</span>
+<span class="hljs-comment">//directly located below and above this comment</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+
+app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+</code></pre>
+<p>The output when a request to <a href="www.example.com">www.example.com</a> occurs:</p>
+<pre class="highlight"><code class="hljs livecodeserver"><span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">23</span>:<span class="hljs-number">49</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Processing application css
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Processing application js
+</code></pre>
+<p>I will walk you through what just happened:</p>
+<p>When the http GET request for <a href="www.example.com">www.example.com</a> hits the server, it runs it through the middleware we set.
+The middleware for <code>/application.js</code> and <code>/application.css</code> isn’t
+triggered because the request’s header value for the Request-URI
+header doesn’t contain the path <code>/application.js</code> and <code>/application.css</code>.</p>
+<p>Once the request reaches the route, the server responds with <code>index.html</code>.
+<code>Index.html</code> contains link tags to <code>/application.js</code> and <code>/application.css</code> and the browser will request for those resources as the DOM is being rendered.</p>
+<p>As you can see, asset (css, js, images, etc) requests will be processed by most of the middleware stack with this configuration, which is what we don’t want. We want asset requests to be only processed by asset middleware.</p>
+<p>The next example shows you why order matters and how the <code>next()</code> function comes into play. As you can see, the middleware for css and js assets are sandwiched between the middleware that console logs random strings. Our expectation is any request on <code>/application.css</code> or <code>/application.js</code> will now only trigger the first two <code>randomString</code> middleware because of the way we structured the <code>use()</code> method calls.</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"123"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"2nd random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"is like a stream"</span>);
+  next();
+});
+
+app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"3rd random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"that flows and flows and flows"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+</code></pre>
+<p>Our hunch was correct! The result should be:</p>
+<pre class="highlight"><code class="hljs livecodeserver"><span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">26</span>:<span class="hljs-number">10</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+Processing application css
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+Processing application js
+</code></pre><p>Finally, our expectation now is an asset requests will only trigger related asset middleware with this configuration.</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"123"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"2nd random string: "</span> + res.random);
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"is like a stream"</span>);
+  next();
+});
+
+<span class="hljs-comment">//more middleware here similar to the ones</span>
+<span class="hljs-comment">//directly located below and above this comment</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+</code></pre>
+<p>It works! The result:</p>
+<pre class="highlight"><code class="hljs applescript"><span class="hljs-number">1</span>st random <span class="hljs-type">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123</span>
+<span class="hljs-keyword">is</span> like a stream
+<span class="hljs-number">3</span>rd random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123456</span>
+<span class="hljs-keyword">that</span> flows <span class="hljs-keyword">and</span> flows <span class="hljs-keyword">and</span> flows
+<span class="hljs-number">4</span>th random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123456456</span>
+<span class="hljs-keyword">through</span> pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">28</span>:<span class="hljs-number">09</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+Processing <span class="hljs-type">application</span> css
+
+Processing <span class="hljs-type">application</span> js
+</code></pre>
+<p>So, what is the point? The ordering of your middleware is very important
+in express that middleware is fun and conceptually simple!</p>
+<p>P.S. Here’s a nice example of where middleware can also hijack requests and send its own responses:</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I'm an angry middleware and I'm going to block all access to the site!"</span>);
+  res.send(<span class="hljs-string">"You're blocked because middleware is angry!"</span>);
+});
+
+app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  fs.readFile(<span class="hljs-string">'./views/index.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, data)</span> </span>{
+    res.send(data.toString());
+  });
+});
+</code></pre>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/05/29/Middleware_in_NodeJS';
+		window.disqus_identifier = '2015-05-29-Middleware-in-NodeJS-index';
+		window.disqus_title = 'How to use Middleware in NodeJS (ExpressJS example)';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Chris Kim</h5><div class="widget-body"><div class="widget-text clearfix"><img src="https://avatars0.githubusercontent.com/u/1328490" alt="Chris Kim" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Chris is passionate about pushing out great products with well-tested code. He loves helping out his clients with their projects and is stimulated by the dailiy challenges mobile and web development provide.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html">Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</a></div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/25/elasticsearch_rails_and_mongoid/index.html">Elasticsearch, Rails and Mongoid</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/05/san_francisco_and_silicon_valley_the_land_of_opportunity/index.html">San Francisco and Silicon Valley, the Land of Opportunity</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

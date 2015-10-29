@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[CodeScrum]]></title>
+        <description><![CDATA[CodeScrum is a software company that understands the user needs and aims to make it better through the building of custom web and mobile applications for it.]]></description>
+        <link>http://blog.codescrum.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 29 Oct 2015 23:08:39 GMT</lastBuildDate>
+        <atom:link href="http://blog.codescrum.com/rss.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Codescrum]]></author>
+        <pubDate>Thu, 29 Oct 2015 23:08:24 GMT</pubDate>
+        <item>
+            <title><![CDATA[Great conferences and great country at RubyConf and JSConf Colombia 2015]]></title>
+            <description><![CDATA[<p>Last week we attended <a href="http://www.rubyconf.co/">RubyConf</a> and <a href="http://jsconf.co/">JSConf</a> Colombia. It was truly a very exciting event, hosted at one of the great cities of Colombia, Medellin; people attended from all over the world.</p>
+<p>Both events took place simultenously, while people from the RubyConf were attending the conferences, JSConf had its attendees working a floor above at the venue <a href="http://rutanmedellin.org/recorrido_virtual/rn1es/">RutaN</a>.</p>
+<p>RutaN was a great place to host the event and this location was built to make the technological and entrepreneurial community stronger in Medellin.</p>
+<p>The whole event spanned over two (2) days, and JSConf and RubyConf switched their conference and workshop days, so anyone (there was the option to purchase a bundle that came with tickets for both events!) could mix and match according to their interests.</p>
+<p>For all people which came sooner to Medellin, the fun started even earlier, as there was a previous <a href="http://fest.colombia-dev.org/">devfest</a> occurring the day before the event, at the very same venue with talks including not only Ruby and JavaScript but other exciting commnunities and languages as well, such as <a href="http://www.meetup.com/Golang-Medellin/">Go</a>, Python, <a href="https://www.rust-lang.org/">Rust</a>, <a href="http://www.erlang.org/">Erlang</a>, <a href="http://elixir-lang.org/">Elixir</a> among others.</p>
+<p>The Ruby conferences were incredible and primarily we would definitely suggest you have a look at <a href="http://www.sandimetz.com/">Sandi Metz</a>&#39;s talk &quot;Nothing is Something&quot;, which (as we understood) talked about how there are these &quot;special&quot; cases for which you would normally put conditionals that push you away from allocating behaviour in a way that lets you deal with separating concerns properly.</p>
+<p>It is definitely worth the time to <a href="https://www.youtube.com/watch?v=29MAL8pJImQ">take a look at her talk</a>, or at the very least take a look at the <a href="https://speakerdeck.com/skmetz/nothing-is-something-railsconf">slides</a>.</p>
+<p>Another awesome talk was performed by <a href="http://www.sarahmei.com/blog/">Sarah Mei</a> which was named &quot;Is Your Code Too SOLID?&quot;, which basically gave us another interesting (and similar, but not quite the same) acronym, STABLE, to be a little bit more careful on the decisions we make when refactoring and dealing with a large codebase.</p>
+<p>STABLE stands for:</p>
+<ul>
+<li><p><strong>S</strong>mell your code</p>
+</li>
+<li><p><strong>T</strong>iny problems first</p>
+</li>
+<li><p><strong>A</strong>ugment tests</p>
+</li>
+<li><p><strong>B</strong>ack up</p>
+</li>
+<li><p><strong>L</strong>eave it better than you found it</p>
+</li>
+<li><p><strong>E</strong>xpect good reasons</p>
+</li>
+</ul>
+<p>As we understood, this is a more pragmatic approach for working with the real world codebases that you probably have encountered or are currently working on, so it is highly recommended that you also take some time to take a look at <a href="https://vimeo.com/136245794">her talk</a> and <a href="https://speakerdeck.com/sarahmei/is-your-code-too-solid-with-transcript">slides here</a>.</p>
+<p>Not all of the tech talks were about object oriented programing though, but some other talks (if not all) that we found interesting had to do with more artistic proposals, like writing your music with code.</p>
+<p>A live performance using MIDI by <a href="https://github.com/dabit">David Padilla</a> with his project <a href="https://github.com/dabit/banjo">Banjo</a>.</p>
+<p>We also had some <a href="http://make8bitart.com/">8-bit art</a> found at <a href="https://github.com/jennschiffer/make8bitart">github here</a> by <a href="http://jennmoney.biz/">Jenn Schiffer</a>.</p>
+<p>For the JS conferences, if there was one thing to go away with was that JavaScript worked pretty well for programming robots.</p>
+<p>For instance, we had <a href="https://twitter.com/rockbot">Raquel Velez</a> from <a href="http://nodebots.io/">Nodebots</a> talk to us about how you can program robot movements (with servos and the like) with JavaScript. She developed <a href="https://github.com/rockbot/vektor">vektor</a>, which is &quot;a robotics-focused linear algebra module&quot;, which basically helps you with the heavy lifting for you work with inverse kinematics to control the movement of your robots much easly.</p>
+<p>And we also had <a href="https://twitter.com/dtex">Donovan Buck</a> to talk about how he used easing functions (very well known for frontend developers when they use animations) in order to improve the way robots move so that they look a lot more natural. To see more of his project you can go to <a href="http://dtex.github.io/">http://dtex.github.io/</a>.</p>
+<p>We saw real robotics demos from both of the speakers, and seems like <a href="http://johnny-five.io/">Johnny Five</a> is a great library to begin interacting with this world via JavaScript.</p>
+<p>In order to know more about this initiative you can check out <a href="http://nodebots.io/">http://nodebots.io/</a> or directly at <a href="http://nodebots.io/projects">http://nodebots.io/projects</a> for cool projects with Robots and JavaScript.</p>
+<p>But not only that, JavaScript also proved to be interesting to write programs that could interact with other hardware components. The <a href="https://github.com/TimPietrusky/NERD.DISCO">NERD.DISCO</a> project by <a href="https://github.com/TimPietrusky">Tim Pietrusky</a> offered quite an audiovisual performance when it got its turn at the conference, and performed later on at the closing of the event, too.</p>
+<p>And finally after having a great time over at the conferences and workshops, we had some drinks at the <a href="https://www.google.com/maps/place/BERLIN+1930+BAR/@6.2101062,-75.5692756,15z/data=!4m2!3m1!1s0x0:0x7efec0d4ec13f4ef">Berlin 1930</a> bar near <a href="https://www.google.com/maps/place/Lleras+Park/@6.2088729,-75.567721,15z/data=!4m2!3m1!1s0x0:0x44cfbc7ff74364a6">Lleras Park</a>, courtesy of the event organizers. At the bar a real life installation for NERD.DISCO was on display at the rythm of the music being played at the location.</p>
+<p>We know many talks are not being mentioned in this post as we are highlighting the ones that caused us more interest, however we can assure that every single one of them had something to offer and thus we encourage you to see the full list of speakers and workshops at <a href="http://www.rubyconf.co/">RubyConf.co</a> and <a href="http://jsconf.co/">JSConf.co</a>.</p>
+<p>And of course, many thanks to all the organizers for writing history and making the first RubyConf and JSConf in Colombia a superb event, we will definitely look forward to any other event from the Ruby and JS community in Colombia.</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Thu, 29 Oct 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose]]></title>
+            <description><![CDATA[<p>In a past post we shared a Rails starter template (<a href="http://blog.codescrum.com/2015/07/28/our_rails_starter_template">rails-template</a>) with the minimal bases for building common rails applications. Now we want to show how to run the rails-template inside a <a href="https://www.docker.com/whatisdocker">Docker</a> local machine and be able to do simple scale and load balancing.</p>
+<p>The diagram below shows the architecture of the example. Basically we run one container for the Mongo database, one for the redis store and multiple containers for the Rails application and the Workers (Sidekiq). On top of that is the Nginx load balancer container that acts as a reverse proxy for the rails containers.</p>
+<p><img src="/images/blog/docker_vm.png" alt="Containers in the VM"></p>
+<h2 id="docker-and-docker-compose">Docker and Docker Compose</h2>
+<p>For our experiments with docker we are using <a href="https://docs.docker.com/machine">docker-machine</a>, that let us to create a Docker host on our machine through a Virtualbox VM. We are not going to talk about how to configure Docker on a local machine, but is fairly explained in the <a href="https://docs.docker.com/machine/get-started">Get started with Docker Machine and a local VM</a> guide from the Docker page.</p>
+<p><a href="https://docs.docker.com/compose">Docker Compose</a> is a tool that let us to define and run with just one file a set of docker containers. For our rails-template we are going to define three classes of containers (<em>webapp</em>, <em>webserver</em>, <em>database</em>) and linking together. Docker compose also allows us to do simple scaling up or down of any container that we have defined.</p>
+<h2 id="docker-images">Docker images</h2>
+<p>For each of our container definitions we need some docker images:</p>
+<ul>
+<li>MongoDB database: we are going to use the official <a href="https://hub.docker.com/_/mongo">mongo 3.0</a> image from docker-hub.</li>
+<li>Redis store: we use the official <a href="https://hub.docker.com/_/redis">redis</a> image from docker-hub.</li>
+<li>Nginx proxy: we are going to use the <a href="https://hub.docker.com/r/jwilder/nginx-proxy">Automated Nginx reverse proxy for docker containers</a> from jwilder. This allows us to update and reload the nginx proxy to add/remove servers to be load balanced when new containers are started/stopped.</li>
+<li><p>Rails app: For this we create our own image from the official <a href="https://hub.docker.com/_/ruby">ruby 2.2.2</a> image using this Dockerfile:</p>
+<pre class="highlight"><code class="hljs sql"># Dockerfile
+
+FROM ruby:2.2.2
+# <span class="hljs-operator"><span class="hljs-keyword">Install</span> dependencies.
+RUN apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span> -qq &amp;&amp; apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">install</span> -y build-essential libpq-dev
+# Setup app directory.
+RUN mkdir /myapp
+WORKDIR /myapp
+# Copy the Gemfile <span class="hljs-keyword">and</span> Gemfile.<span class="hljs-keyword">lock</span> <span class="hljs-keyword">into</span> the image <span class="hljs-keyword">and</span> <span class="hljs-keyword">install</span> gems <span class="hljs-keyword">before</span> the project <span class="hljs-keyword">is</span> copied <span class="hljs-keyword">to</span> avoid <span class="hljs-keyword">do</span> bundle <span class="hljs-keyword">install</span> every <span class="hljs-keyword">time</span> <span class="hljs-keyword">some</span> project file <span class="hljs-keyword">change</span>.
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.<span class="hljs-keyword">lock</span> /myapp/Gemfile.<span class="hljs-keyword">lock</span>
+RUN bundle <span class="hljs-keyword">install</span> <span class="hljs-comment">--without development test doc --jobs=4</span>
+# Everything up <span class="hljs-keyword">to</span> here was cached. This includes the bundle <span class="hljs-keyword">install</span>, unless the Gemfiles <span class="hljs-keyword">changed</span>. <span class="hljs-keyword">Now</span> copy the app <span class="hljs-keyword">into</span> the image.
+<span class="hljs-keyword">ADD</span> . /myapp
+# Expose unicorn port.
+EXPOSE <span class="hljs-number">8080</span>
+</span></code></pre></li>
+<li>Worker app: For this we are going to use the same image builded from the Rails app.</li>
+</ul>
+<h2 id="docker-compose-definition">Docker compose definition</h2>
+<p>The docker compose file that define the containers is:</p>
+<pre class="highlight"><code class="hljs haml"># docker-compose.yml
+
+webapp:
+  build: .
+  command: bundle exec unicorn -E production -c config/unicorn.rb
+  volumes:
+    -<span class="ruby"> .<span class="hljs-symbol">:/myapp</span>
+</span>  links:
+    -<span class="ruby"> db
+</span>  env_file: .env
+  environment:
+    RACK_ENV: production
+    RAILS_ENV: production
+    VIRTUAL_HOST: rails-template.docker
+db:
+  image: mongo:3.0
+  command: mongod --smallfiles --quiet
+proxy:
+  image: jwilder/nginx-proxy:latest
+  ports:
+    -<span class="ruby"> <span class="hljs-string">"80:80"</span>
+</span>  volumes:
+    -<span class="ruby"> <span class="hljs-string">"/var/run/docker.sock:/tmp/docker.sock"</span>
+</span>redis:
+  image: redis
+worker:
+  build: .
+  command: bundle exec sidekiq -e production -c 5
+  env_file: .env
+  environment:
+    RAILS_ENV: production
+  links:
+    -<span class="ruby"> db
+</span>    -<span class="ruby"> redis
+</span></code></pre><p>The docker-compose file defines a webapp service that use the image from the <em>Dockerfile</em> of the project. This runs the application through unicorn, and links to the <em>db</em> service. This also sets some environment variables needed by the app, between them one important is the VIRTUAL_HOST environment variable, this is the trick that tells to the <em>proxy</em> service that this container wants to be proxyfied. We use the rails-template.docker as the virtual server name, so we need to add it to the hosts file:</p>
+<pre class="highlight"><code class="hljs nimrod"><span class="hljs-comment"># /etc/hosts</span>
+.
+.
+.
+{docker-machine ip} rails-<span class="hljs-keyword">template</span>.docker
+</code></pre><p>The {docker-machine ip} value is taken from the command:</p>
+<pre class="highlight"><code class="hljs puppet">docker-machine <span class="hljs-literal">ip</span> boot2docker
+</code></pre><p>The <em>db</em> and redis services are self described.</p>
+<p>In the <em>proxy</em> service the only thing to emphasize is that the 80 port is exposed to the host machine to allows to check the application in our local machine</p>
+<p>The <em>worker</em> service links to the <em>db</em> and <em>redis</em> services.</p>
+<h2 id="running-the-containers">Running the containers</h2>
+<p>To be able to run the rails-template in Docker we need to first build or pull the images, we do this with:</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose build
+</code></pre><p>It is going to take some time while it download the images from docker-hub and build our rail image.</p>
+<p>Now we can run the containers with the command:</p>
+<pre class="highlight"><code class="hljs bash">docker-compose up <span class="hljs-operator">-d</span>
+</code></pre><p>The -d option is to run all containers in the background.</p>
+<p>We can check the app in the browser at <a href="http://rails-template.docker">http://rails-template.docker</a></p>
+<p>The Rails application also is configured to run a sidekiq async process that prints the current time every time a request to the app is made, we can see that working with:</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose logs worker
+</code></pre><h2 id="scaling-the-application">Scaling the application</h2>
+<p>Now that we have the application running we can scale the webapp service to 3 replicas and the worker up 2 replicas. We do this with the command:</p>
+<pre class="highlight"><code class="hljs mel">docker-compose <span class="hljs-keyword">scale</span> webapp=<span class="hljs-number">3</span>
+docker-compose <span class="hljs-keyword">scale</span> worker=<span class="hljs-number">2</span>
+</code></pre><p>Now there are two more webapp containers running in the docker machine and be automatically load balanced by the proxy container. We can check this making many requests and by opening the webapp logs:</p>
+<pre class="highlight"><code class="hljs nimrod"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span> curl http://rails-<span class="hljs-keyword">template</span>.docker; echo -----; sleep <span class="hljs-number">1</span>; done;
+</code></pre><p>In other console</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose logs webapp
+</code></pre><pre class="highlight"><code class="hljs undefined">docker-compose logs worker
+</code></pre><p>We would be able to see how the requests are taken by each of the webapp containers and fire a worker background process.</p>
+<p>The example code could be found in this repository: <a href="http://github.com/codescrum/rails-template-docker-compose-example-1">http://github.com/codescrum/rails-template-docker-compose-example-1</a></p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Tue, 25 Aug 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Our Rails Starter \'Template\']]></title>
+            <description><![CDATA[<p>We want to share with the community a work that we began a little over two weeks ago, the main idea was to have a Rails starter template with the minimal bases for building common rails applications, we had analysed several options and existent resources (for example <a href="https://github.com/markets/awesome-ruby">awesome-ruby</a>, <a href="http://www.railswizard.org/">rails-wizard</a>, <a href="https://github.com/RailsApps/rails-composer">rails-composer</a>, <a href="https://github.com/thoughtbot/suspenders">suspenders</a>, among others). These are very good tools, however, we needed a more concept-oriented resource for ourselves, think of it as a kind of inception which will cover all critical aspects in the most common development areas.</p>
+<p><img src="/images/blog/ror_template.png" alt="Our Rails Starter Template"></p>
+<h2 id="goals">Goals</h2>
+<p>Our goals were to define an homogeneous base of knowledge, speed up our development process, minimize some common errors and define a good base for our best practices in coding, all of these as a part of strengthening our development style.</p>
+<p>At the beginning, we just had in mind to define and use existing tools and gems in the following areas: security, configuration, code quality, testing, performance, debugging and frontend. However, in the template building process we have created our own approaches and libs for managing some resources different than Rails commonly does it.</p>
+<h2 id="what-s-this-template-good-for-">What&#39;s this &#39;template&#39; good for?</h2>
+<p>This basic Rails application template addresses the most common scenario for a standard Rails application; and includes best practices, configurations for  production environment, and a comprehensive readme file explaining the different gems and custom configurations.</p>
+<p>For example, the template uses a layout inheritance approach to include in every page your analytics scripts or any other code you need.</p>
+<p>We have also included basic code quality and basic security gems and tools.
+We propose a new structured pattern to organize your Sass files that we have named Sassish, and a dead-simple pattern for organizing and including Javascript code.</p>
+<p>For application configuration we suggest improved mechanisms for the <code>secrets.yml</code> file and use of  environment variables (ENV) using the gem dotenv.</p>
+<p>Other gem included are: RSpec, Database cleaner, Capybara, simplecov, phantomjs+poltergeist,  and pry and friends among others
+Please read the <a href="https://github.com/codescrum/mongoid-rails-template/blob/master/README.md">README</a> for information on additional gems and techniques included.</p>
+<h3 id="tldr">TLDR</h3>
+<p>Just take me to the template... here it is:</p>
+<p><a href="https://github.com/codescrum/mongoid-rails-template">https://github.com/codescrum/mongoid-rails-template</a></p>
+<p><br></p>
+<p>At the time of this writing, the template is only at its first version, all information is contained in the <strong><a href="https://github.com/codescrum/mongoid-rails-template/blob/master/README.md">readme</a></strong> and we are pretty sure that this could be useful to any development team.</p>
+<p>Take into account that this first version uses Mongoid, however migrating to ActiveRecord is not a difficult task (we are planning on doing an ActiveRecord based template too anyway). Try checking out the <strong><a href="https://github.com/codescrum/mongoid-rails-template#notes">latest notes</a></strong> to see our initial thoughts on migrating to ActiveRecord (basically, just more gems to include).</p>
+<p>Finally, we are thinking about modularizing our template, using the built-in <a href="http://guides.rubyonrails.org/generators.html#application-templates">rails templating approach</a> or perhaps go in a totally different direction  using a &quot;git apply patch&quot; strategy in order to be able to modify existing applications, instead of just when creating a new one.</p>
+<p>As you can see, the template is a rails project in itself, it is <strong>not</strong> a rails template (the ones you install as <code>rails new myapp -m path/or/url/to/template/here</code>). The reason for this is that we chose to have it as baked as possible.</p>
+<p>We would like to keep this post as a short introductory post and for you to check out the repo as all information is contained in more detail in the <a href="https://github.com/codescrum/mongoid-rails-template/blob/master/README.md">README</a> file.</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/07/28/our_rails_starter_template/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/07/28/our_rails_starter_template/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Tue, 28 Jul 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Elasticsearch, Rails and Mongoid]]></title>
+            <description><![CDATA[<p>In most information systems chances are you will have some kind of data search and filtering features since they are commonly demanded by business processes, the selected tool (or tools) depends on how complex is the search itself. In the Rails domain we have access to several tools: DB through ODM/ORM/O*M tools, <a href="https://github.com/mrkamel/search_cop">Searchcop</a>, <a href="https://github.com/activerecord-hackery/ransack">Ransack</a>, <a href="https://github.com/textacular/textacular">Textacular</a> (only for postgres). However, most of these search tools are dependant on the database directly and perform strict filters which may be limiting for more complex scenarios.</p>
+<p><img src="/images/blog/elasticsearch_rails_mongoid.png" alt="Elasticsearch, Rails and Mongoid"></p>
+<p>The main idea with these post series (this is the first one) is showing how is the integration process between an stable search engine and Rails and how make an advanced filters and searches with the information available in your system.</p>
+<p>Leaving aside the simple and self-integrated solutions for searching, our team was looking for a complete and smooth approach for it. After an analysis for several external options and engines (most of them were old acquaintances) among which were Sphinx, Solr and Elasticssearch (ES) we decided to use Elasticsearch, we were keen about the new interesting features available in its newest versions (like mapping, scoring and boosting functions, scripting support, distributed model support, elegant API and so on), you can find a good comparison for both Solr and ES in this <a href="https://www.loggly.com/blog/loggly-chose-elasticsearch-reliable-scalable-log-management/">post</a> (although it is about a year ago).</p>
+<p>Once we had chosen our engine we needed to explore what would be our ruby client for it, the answer was not difficult to find. Before, we had worked with <a href="https://github.com/karmi/retire">Tire</a>, but it is now deprecated in favor of the <strong><a href="https://github.com/elastic/elasticsearch-rails">elasticsearch-rails</a></strong> gem that is supported by  Elasticsearch and Tire creator itself. Our first impression for this gem was that was pretty complete and stable, and at the end we were right, also the initial integration is pretty straightforward and there are a good post set for explaining this (for example <a href="http://www.codinginthecrease.com/news_article/show/409843">here</a>). We are going to show here the basics for implementing a simple search with elasticsearch and rails using the elasticsearch-rails gem.</p>
+<p>##INSTALLATION</p>
+<p>###Elasticsearch
+In your development environment, you can install the elasticsearch server by using the brew package manager, however if you want a more portable solution (with edge support) you can download the specific version you desire from <a href="https://www.elastic.co/downloads/elasticsearch">here</a>. We will be using version 1.6.0.</p>
+<p>using brew</p>
+<pre class="highlight"><code class="hljs sh">$ brew install elasticsearch
+$ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+</code></pre>
+<p>or downloading directly</p>
+<pre class="highlight"><code class="hljs sh">$ wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>.tar.gz
+$ tar xopf elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>.tar.gz
+$ sh elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>/bin/elasticsearch
+</code></pre>
+<p>In order to see if everything is ok you can run the next command (it assumes that the server has a default configuration)</p>
+<pre class="highlight"><code class="hljs sh">$ curl -X GET http://localhost:<span class="hljs-number">9200</span>/
+</code></pre>
+<p>###IN YOUR RAILS APP
+The installation process is pretty simple, you only need to add the correct dependencies in your Gemfile and the correct modules in your model. Also, we are going to deal with some issues and tricks associated with pagination, deployment on heroku, code inspection and a known caveat when using STI.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Gemfile</span>
+<span class="hljs-comment"># ...</span>
+gem <span class="hljs-string">'elasticsearch-model'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'git://github.com/elasticsearch/elasticsearch-rails.git'</span>
+gem <span class="hljs-string">'elasticsearch-rails'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'git://github.com/elasticsearch/elasticsearch-rails.git'</span>
+</code></pre>
+<p>you can see more information about these gems <a href="https://github.com/elastic/elasticsearch-rails#usage">here</a>.</p>
+<p>Once you have added the associated gems, you can configure the elasticsearch url from rails (it will configure the way how Rails will connect to the elasticsearch server), by default the server is on <a href="http://localhost:9200">http://localhost:9200</a>.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-constant">Elasticsearch::Model</span>.client = <span class="hljs-constant">Elasticsearch::Client</span>.new <span class="hljs-symbol">url:</span> <span class="hljs-constant">ENV</span>[<span class="hljs-string">'ELASTICSEARCH_URL'</span>] || <span class="hljs-string">"http://localhost:9200/"</span>
+</code></pre>
+<h2 id="play-with-elasticsearch">PLAY WITH ELASTICSEARCH</h2>
+<p>You can find good articles related with the first inception between elasticsearch and rails <a href="http://aaronvb.com/articles/intro-to-elasticsearch-ruby-on-rails-part-1.html">here</a>. The example on that post plays with ActiveRecord models, however we want to make an example using a NoSQL database (MongoDB in this case), the reason is nothing special, we want to save some time from running migrations and other things that are simpler compared to SQL databases (we understand that for a simple scenarios -learning purpose- the database type is not a big difference). Suppose that we have an existent user model who has a <code>first_name</code>, <code>last_name</code> and <code>email</code> fields.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># app/models/user.rb</span>
+<span class="hljs-comment"># Code extracted from a devise model, also it is using Mongoid 4.0.2 as its ODM</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Mongoid::Document</span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model</span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model::Callbacks</span>
+
+  <span class="hljs-comment"># index name for keeping consistency among existing environments</span>
+  index_name <span class="hljs-string">"users-<span class="hljs-subst">#{<span class="hljs-constant">Rails</span>.env}</span>"</span>
+
+  field <span class="hljs-symbol">:email</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+  field <span class="hljs-symbol">:first_name</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+  field <span class="hljs-symbol">:last_name</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>as_indexed_json
+    as_json(<span class="hljs-symbol">except:</span> [<span class="hljs-symbol">:id</span>, <span class="hljs-symbol">:_id</span>])
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>You only need to include <code>Elasticsearch::Model</code> and <code>Elasticsearch::Model::Callbacks</code> modules for getting the default behavior, however if you are going to work with more than one environment you should configure an index name according to the specific environment, you can easily do that calling the index_name method. Finally, you need to create a method named <code>as_indexed_json</code> in your searchable model in order to tell Elasticsearch how the index document will be structured (We will analyze this method in other posts).</p>
+<p>Also, you need to create the Elasticsearch index and perform the first importing process, you can do that inside an initializer file, we are going to reuse our previous initializer:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-constant">Elasticsearch::Model</span>.client = <span class="hljs-constant">Elasticsearch::Client</span>.new <span class="hljs-symbol">url:</span> <span class="hljs-constant">ENV</span>[<span class="hljs-string">'ELASTICSEARCH_URL'</span>] || <span class="hljs-string">"http://localhost:9200/"</span>
+
+<span class="hljs-keyword">unless</span> <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.index_exists?
+  <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+  <span class="hljs-constant">User</span>.import
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>In this way, you can start using the search engine magic, we are going to create some seeds on the <code>User</code> model</p>
+<pre class="highlight"><code class="hljs ruby">user_names = [<span class="hljs-string">'John Doe'</span>, <span class="hljs-string">'Allam Britto'</span>, <span class="hljs-string">'Bob Dylan'</span>, <span class="hljs-string">'Alice Cooper'</span>, <span class="hljs-string">'Alice Pasquini'</span>]
+
+user_names.each <span class="hljs-keyword">do</span> |user_name|
+  user_params = {
+    <span class="hljs-symbol">first_name:</span> user_name.split(<span class="hljs-string">' '</span>).first,
+    <span class="hljs-symbol">last_name:</span> user_name.split(<span class="hljs-string">' '</span>).last,
+    <span class="hljs-symbol">email:</span> <span class="hljs-string">"<span class="hljs-subst">#{user_name.downcase.gsub(<span class="hljs-string">' '</span>, <span class="hljs-string">'.'</span>)}</span>@example.com"</span>,
+    <span class="hljs-symbol">password:</span> <span class="hljs-string">'12345678'</span>
+  }
+  <span class="hljs-constant">User</span>.find_or_create_by user_params
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>And we could to execute some queries, like this</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).count
+<span class="hljs-comment">#=&gt; 1</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).count
+<span class="hljs-comment">#=&gt; 2</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).first
+<span class="hljs-comment">#=&gt; #&lt;Elasticsearch::Model::Response::Result:0x007fc25c52e8a8 <span class="hljs-yardoctag">@result</span>=#&lt;Hashie::Mash _id="558885474a7561a99a010000" _index="users-development" _score=0.15342641 _source=#&lt;Hashie::Mash email="allam.britto<span class="hljs-yardoctag">@example</span>.com" first_name="Allam" last_name="Britto"&gt; _type="user"&gt;&gt;</span>
+</code></pre>
+<p>Also, you have two choices for retrieving your results:</p>
+<ol>
+<li><p><code>#records</code>, this method returns the real instances of your model (it hits the database), it will return a genuine collection of model instances by your database, i.e. ActiveRecord::Relation for ActiveRecord, or Mongoid::Criteria in case of MongoDB (text extracted from the <a href="https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model#search-results-as-database-records">elasticsearch-rails gem</a>).</p>
+</li>
+<li><p><code>#results</code>, this method returns a collection of Elasticsearch objects (gives you information directly, without hitting the database).</p>
+</li>
+</ol>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).records.records.<span class="hljs-keyword">class</span>
+<span class="hljs-comment">#=&gt; Mongoid::Criteria</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).results.results.<span class="hljs-keyword">class</span>
+<span class="hljs-comment">#=&gt; Array</span>
+</code></pre>
+<p>We issue <code>records.records</code> and <code>results.results</code> instead of just <code>records</code> and <code>results</code> because the first call gives you elasticsearch instances representing the results or records and the second one is to actually fetch them.</p>
+<p>###AWESOME_PRINT AND PRY PROBLEMS?</p>
+<p>We love both debugging and inspecting our applications and the readability is also important for us, if you are using some gem similar to <a href="https://github.com/jkrmr/jazz_hands">jazz_hands</a> or <a href="https://github.com/plribeiro3000/jazz_fingers">jazz_fingers</a> that are related with <strong><a href="https://github.com/michaeldv/awesome_print">awesome_print</a></strong> and you are using <strong>Mongoid</strong> like this example, perhaps you will probably have a problem similar to this:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).first
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.first
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.to_a
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+</code></pre>
+<p>In this case, when we try to invoke an output associated with an <code>Array</code> from our <code>Elasticsearch::Model::Response::Result</code> model and our inspecting system is working with <code>awesome_print</code>, our application will break. You can find a full explanation for this problem <a href="https://github.com/elastic/elasticsearch-rails/issues/430">here</a>.</p>
+<p>As you can see in the referenced issue, the solution is pretty simple (actually, it took us nearly 5 hours to debug this obscure thing) and you can make a little monkey patch for solving the problem, first we are going to guarantee that the lib folder is autoloaded by Rails</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/application.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rails::Application</span></span></span>
+  <span class="hljs-comment"># ...</span>
+  <span class="hljs-comment"># Auto-loading lib files</span>
+  config.autoload_paths &lt;&lt; <span class="hljs-constant">Rails</span>.root.join(<span class="hljs-string">'lib'</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Then, we are going to perform our monkey patch using a module strategy (the module will be named <code>Hashable</code>, but it&#39;s just a name we put to it)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># lib/extensions/elasticsearch/model/response/hashable.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Extensions</span></span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Elasticsearch</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Model</span></span>
+      <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Response</span></span>
+        <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Hashable</span></span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># Returns the result object as a plain ruby hash to support awesome_print benefits</span>
+          <span class="hljs-comment"># it allows invoking the Elasticsearch::Model::Response::Result#method(:to_hash) method</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># <span class="hljs-yardoctag">@return</span> [Hash]</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-function"><span class="hljs-keyword">def</span> </span>to_hash
+            <span class="hljs-variable">@result</span>.to_h
+          <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Finally, we are going to reuse our elasticsearch initializer for including our monkey patch</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>? <span class="hljs-constant">Mongoid</span>
+  <span class="hljs-constant">Elasticsearch::Model::Response::Result</span>.<span class="hljs-keyword">include</span> <span class="hljs-constant">Extensions::Elasticsearch::Model::Response::Hashable</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Cool, now we can use a better printer for our command’s output (using <strong>mongoid</strong> and <code>awesome_print</code>)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.first
+<span class="hljs-comment"># =&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "user",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558885474a7561a99a010000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 0.15342641,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "allam.britto<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Allam",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Britto"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<h3 id="sti-single-table-inheritance-and-document-type-approaches">STI (Single Table Inheritance) AND DOCUMENT TYPE APPROACHES</h3>
+<p>Ok we have just begun, and we already have made some simple searches using the indexing approach from elasticsearch, but what is an index? you can find a great explanation <a href="https://www.elastic.co/blog/what-is-an-elasticsearch-index">here</a>, but essentially an index has two meanings: as a noun and as a verb.</p>
+<ol>
+<li>noun: is the place for storing related documents.</li>
+<li>verb:  is to store a document inside an index (noun) so that it can be retrieved and queried.</li>
+</ol>
+<p>On the Elasticsearch context an index can contain many types. You could map this relation as:</p>
+<p>one Index =&gt; many Types</p>
+<p>one Relational Database =&gt; many Tables</p>
+<p>With this in mind, suppose that we have a new user type and for a business domain reason you need to apply a STI approach, something like this</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># app/model/adviser.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adviser</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">User</span></span></span>
+  <span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Let’s create some dummy data for our new model</p>
+<pre class="highlight"><code class="hljs ruby">adviser_names = [<span class="hljs-string">'Alex Morgan'</span>, <span class="hljs-string">'Nadine Angerer'</span>, <span class="hljs-string">'Michelle Akers'</span>, <span class="hljs-string">'Mia Hamm'</span>, <span class="hljs-string">'Lady Andrade'</span>]
+
+adviser_names.each <span class="hljs-keyword">do</span> |adviser_name|
+  adviser_params = {
+    <span class="hljs-symbol">first_name:</span> adviser_name.split(<span class="hljs-string">' '</span>).first,
+    <span class="hljs-symbol">last_name:</span> adviser_name.split(<span class="hljs-string">' '</span>).last,
+    <span class="hljs-symbol">email:</span> <span class="hljs-string">"<span class="hljs-subst">#{adviser_name.downcase.gsub(<span class="hljs-string">' '</span>, <span class="hljs-string">'.'</span>)}</span>@example.com"</span>,
+    <span class="hljs-symbol">password:</span> <span class="hljs-string">'12345678'</span>
+  }
+  <span class="hljs-constant">Adviser</span>.find_or_create_by adviser_params
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>But what happens when we try to index this model?</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#  "acknowledged" =&gt; true</span>
+<span class="hljs-comment">#}</span>
+<span class="hljs-constant">Adviser</span>.import
+<span class="hljs-comment">#=&gt; SystemStackError: stack level too deep</span>
+</code></pre>
+<p>Unfortunately, it does not work, you can find more information about this problem <a href="https://github.com/elastic/elasticsearch-rails/issues/333#issuecomment-104301909">here</a>, as you can see in the issue the simplest solution is to include the <code>Elasticsearch::Model</code> module once again in the child class. Also we will have to rename the document type taking into account the elasticsearch indexing structure mentioned before.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adviser</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">User</span></span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model</span>
+
+  index_name <span class="hljs-string">"users-<span class="hljs-subst">#{<span class="hljs-constant">Rails</span>.env}</span>"</span>
+  document_type <span class="hljs-string">"adviser"</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>For importing our new data from the <code>Adviser</code> model to the elasticsearch engine is necessary re-edit our elasticsearch initializer, but before of that we are going to delete our previous user index (you can avoid this step by executing <code>Adviser.import</code> in a rails console)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.client.indices.delete <span class="hljs-symbol">index:</span> <span class="hljs-constant">User</span>.index_name <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+</code></pre>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">unless</span> <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.index_exists?
+  <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+  <span class="hljs-constant">User</span>.import
+  <span class="hljs-constant">Adviser</span>.import
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>With the previous implementation you already can execute searches using the new model (<code>Adviser</code>), yay!</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.search(<span class="hljs-string">'Alex'</span>).first
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "adviser",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558990784a7561240d000000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 0.7554128,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "alex.morgan<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Alex",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Morgan"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<p>Well, now we have a common structure for dealing both the simple searches and the indexing process. What is the next feature we need to deal with? We are going to leave the full searches capabilities for another post <em>inside these post series</em>, for now we are going to deal with the pagination stuff.</p>
+<h3 id="pagination">PAGINATION</h3>
+<p>Pagination is a pretty simple integration which comes with the <a href="https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model#pagination">elasticsearch-rails gem</a>, however this gem has a little problem, always selects the <a href="https://github.com/amatsuda/kaminari">kaminari</a> integration in favor of <a href="https://github.com/mislav/will_paginate">will_paginate</a>. It is not really a critical problem because why should we have both implementations in the same rails project?, but for example, what happens if you like will_paginate but you are also using <a href="https://github.com/sferik/rails_admin">rails_admin</a> (this could be a common scenario that could be repeated with other implemetations as well).</p>
+<p><strong>Rails Admin</strong> uses Kaminari by default and if you want to use the will_paginate integration in your project you will have to override the pagination methods because by default elasticsearch-rails will have integrated with kaminari, you can see more information of this behavior <a href="https://github.com/elastic/elasticsearch-rails/issues/423">here</a>. So, the solution is described in the previous link and is also pretty simple, we only need to include the will_paginate elasticsearch module - we could use an initializer for that - (although this solution is a little dirty it works fine)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-comment"># NOTE: you only need to do that if your rails project has both the kaminari and will_paginate implementations and you want to use will_paginate</span>
+<span class="hljs-constant">Elasticsearch::Model::Response::Response</span>.__send_<span class="hljs-number">_</span> <span class="hljs-symbol">:include</span>, <span class="hljs-constant">Elasticsearch::Model::Response::Pagination::WillPaginate</span>
+</code></pre>
+<p>In the future, perhaps the gem should have an external configurator for this specific feature, for now, we will have to make these tricks.</p>
+<p>Once you have configured your pagination integration (will_paginate in our case) we could execute something similar to this.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.search({}).paginate(<span class="hljs-symbol">page:</span> <span class="hljs-number">3</span>, <span class="hljs-symbol">per_page:</span> <span class="hljs-number">2</span>).results.first
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "adviser",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558990784a7561240d010000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 1.0,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "nadine.angerer<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Nadine",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Angerer"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<p>If you don&#39;t do this, you will not get any errors while trying to paginate and it will not actually paginate.</p>
+<h2 id="deploy-to-heroku">DEPLOY TO HEROKU</h2>
+<p>You have a few options for deploying elasticsearch on heroku, however there is a micro plan for free, using an addon named <a href="https://elements.heroku.com/addons/searchbox">SearchBox Elasticsearch</a>. Also we have made an <a href="https://github.com/Johaned/elasticsearch-project">example project</a> in which we develop all the topics covered in this post.</p>
+<p>First, for deploying to Heroku you need to build your application in, then you will have to integrate some necessary addons using your heroku toolbelt (preferably) inside the root project folder.</p>
+<pre class="highlight"><code class="hljs sh">$ heroku addons:create searchbox:starter
+$ heroku addons:create mongolab:sandbox
+$ git push heroku master
+</code></pre>
+<p>Second, you should take into account that with these addons you only can have two indices and the storage is pretty limited, but you should be ok to test with them.</p>
+<h2 id="in-closing">IN CLOSING</h2>
+<p>Beyond these steps, the integration between Rails and Elasticsearch is simple, however there are some tricks for some odd cases (some of them have been explained here) but the integration itself has a lot of benefits and tools for searching and filtering, in the following posts we are going to deal with searches of medium and high complexity. We will return soon!</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/06/25/elasticsearch_rails_and_mongoid/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/06/25/elasticsearch_rails_and_mongoid/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Thu, 25 Jun 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[San Francisco and Silicon Valley, the Land of Opportunity]]></title>
+            <description><![CDATA[<p>At the beginning of May, I came to San Francisco as part of the <a href="http://www.ldn2sfo.com/">Lnd2Sfo</a> Group organised by <a href="https://www.linkedin.com/profile/view?id=5820944">Jack Gavigan</a> with the purpose of helping UK entrepreneurs make connections and build their network in Silicon Valley.</p>
+<p>Jack Gavigan did a great job as the host of a 5-day visit to San Francisco and around Silicon Valley. We had the opportunity to meet with different entrepreneurs and VCs at different stages of development, from those who had recently arrived to the area to those with successful businesses and involvement in several ventures.</p>
+<p>The visit also included presentations from supporting organisations such as the <a href="https://www.gov.uk/government/world/organisations/british-consulate-general-san-francisco">British Consulate</a> and <a href="http://www.orrick.com/">Orrick</a>. These were very helpful to those planning to stay and do business here.</p>
+<p>In this post I will summarise the activities and mention the people and locations that we visited during our tour.</p>
+<p>I also want to thank the different participants who gave their time to meet us and make our introduction to the area a great experience.</p>
+<h2 id="monday">Monday</h2>
+<p>Our trip started at the British Consulate on a very nice sunny day. We were lucky to have this weather for most to the week. The British Consulate hosted our meetings for the day.
+<a href="http://www.linkedin.com/profile/view?id=1034866">Helen Moore</a> and <a href="http://www.linkedin.com/profile/view?id=115612145">Alexandra West</a> introduced us to the general business environment of San Francisco and Silicon Valley.</p>
+<p>San Francisco is home to the headquarters of Salesforce, Twitter, Dolby, Airbnb, Uber, Riverbed, Yelp, Pinterest, Zynga. And Silicon Valley is home to the headquarters of Google, Facebook, Yahoo, LinkedIn and Cisco among others.</p>
+<p>The Unicorn Club is the name for startup companies with valuations over a billion dollars. San Francisco is “home of unicorns” such as Twitter and Uber. Silicon Valley leads as the top region for Venture Capital in the World.</p>
+<p><a href="http://www.linkedin.com/profile/view?id=11816822">Olivia Lee</a> from <a href="http://www.minamitamaki.com/">Minami Tamaki</a> gave us an overview of the non-immigrant visas for entrepreneurs. There are several types but the preferred types are O-1, L-1, and E-1/E-2. Olivia has been helping many of the Uk entrepreneurs with their work visas.</p>
+<p><a href="http://www.linkedin.com/profile/view?id=29090631">Jenna Anians</a> from <a href="http://tribesports.com/">Tribesports</a> gave us a detailed account of her experience setting up the US office for her company. For example, the recommended bank was the <a href="http://www.svb.com/">Silicon Valley Bank</a>. She mentioned that living expenses in San Francisco are 30% higher than in London.</p>
+<p>In the afternoon we met with <a href="http://www.paulcarr.com/">Paul Carr</a>, editorial director of <a href="http://pando.com/">PandoDaily</a>, at the Four Seasons Hotel. He recommended to work hard and be serious with our projects. Given the high rewards at play, people here gravitate around committed, well-prepared and smart teams. He also mentioned the pressures of keeping journalism honest in a location with very wealthy and powerful people.</p>
+<h2 id="tuesday">Tuesday</h2>
+<p>In the morning we started at <a href="http://www.monkeyinferno.com/">Money Inferno</a> led by <a href="http://www.linkedin.com/profile/view?id=128736603">Shaan Puri</a>. He was keen to point out that showing traction has become an important element to get VC funding. Hence, among several other things, his team works on a custom platform to measure and improve traction of new products. The new version of Bebo is currently one of his products.</p>
+<p>For lunch we went to the <a href="http://www.dailygrill.com/">Daily Grill</a> with <a href="http://www.linkedin.com/profile/view?id=69951793">Andrew Brackin</a> who is a Thiel Fellow. Instead of a traditional education, the Thiel Fellows learn by doing with the support of prestigious mentors. He is helping Jobr to scale, which is a leading mobile jobs app that uses your LinkedIn profile to surface amazing jobs for you.</p>
+<p>In the afternoon, we went to <a href="http://www.cloudflare.com/">CloudFlare</a> and met the CEO <a href="http://www.linkedin.com/profile/view?id=9171">Matthew Prince</a>. CloudFlare is one of the Unicorn companies, valued at more than 1 billion, with 120 people with 80% of those being engineers. CloudFlare provides a content delivery network and distributed domain name server system.</p>
+<p>He considered the community around the product a key competitive asset. CloudFlare clients are happy to wear the company&#39;s t-shirt and be part of its community of webmasters. He also stressed the need for companies to solve real problems.</p>
+<p>At night, we attended an event in <a href="http://www.galvanize.com/campuses/san-francisco-soma/">Galvanize</a> and heard from <a href="http://www.heidiroizen.com/">Heidi Rozen</a>. Her story is how she achieved success in the VC industry run by men. She is a great speaker with tons of tips for entrepreneurs. Among those tips is the top 5 list of what a VC wants from an entrepreneur&#39;s pitch:</p>
+<ol>
+<li>Tell me that there is a big problem somewhere.</li>
+<li>Tell me that you have solved this problem.</li>
+<li>Tell me why your solution is better than everyone else’s.</li>
+<li>Tell me how you make money.</li>
+<li>Tell me why you are the best person to work on this.</li>
+</ol>
+<h2 id="wednesday">Wednesday</h2>
+<p>On Wednesday morning we were based at <a href="http://www.orrick.com/">Orrick</a> where we met <a href="https://www.linkedin.com/profile/view?id=3726813">Amanda Galton</a> and
+<a href="http://www.linkedin.com/profile/view?id=15718592">Shawn Atkinson</a>. They explained the benefits of being an entrepreneur supported by Orrick. Funding term-sheets are written by VCs so it is important to have a strong partner for the complexities of these deals. In this nice office we took a picture of our cohort. We were a small group so we had a lot of invaluable conversations on our particular plans with our hosts during the week.</p>
+<p><img src="/images/blog/san_francisco_group_photo.jpg" alt="San Franciso Group Photo"></p>
+<p><a href="http://www.linkedin.com/profile/view?id=6813758">Duncan Logan</a> from <a href="http://rocketspace.com/">RocketSpace</a> was next and shared with us the story of Uber which was based in RocketSpace and sat across his office when they were just a group of seven people. He suggested that we should read the Ferguson’s Formula for leading teams.</p>
+<p>RocketSpace is also focusing on corporate innovation, consulting for corporates that need to understand how startups work, how to work with them, and how to work like them.</p>
+<p>Next was <a href="http://www.linkedin.com/profile/view?id=78633">Phil Black</a> from <a href="http://www.trueventures.com/">True Ventures</a>. True Ventures has funded companies such as PuppetLabs, MarketBot, Npm, KISSmetrics and Spree Commerce among others. He believes that the engineering talent is the lifeblood of the company and that having a technical co-founder is a must.</p>
+<p>He points out that &#39;San Francisco is like Florence in the Renaissance&#39; and that all the indicators are pointing to more growth in the area. VC funding is also moving downwards, an interesting trend documented in a <em>New Yorker</em> <a href="http://www.newyorker.com/magazine/2013/10/14/bay-watched">article</a>.</p>
+<p>In the afternoon, we visited <a href="http://softtechvc.com/">SoftTech</a> and we met <a href="http://www.linkedin.com/in/andymcloughlin">Andy McLoughlin</a>, founder of <a href="http://www.huddle.com/">Huddle</a>. He was in his first few weeks after becoming a venture partner, although he already has a strong profile in <a href="http://angel.co/">Angel List</a>.</p>
+<p>He started helping friends with some cash and had invested in many innovative SaaS businesses like Apiary, Tray.io, Bugsnag, Rolepoint, Buffer, Intercom, Import.io and Pipedrive, as well as logistics and commerce plays including Postmates, Secret Escapes and Zesty.</p>
+<p>In the evening, we visited the LinkedIn office in San Francisco to attend a panel on Product Design with people from LinkedIn, Google, Facebook and other consultants and startups.</p>
+<h2 id="thursday">Thursday</h2>
+<p>On this day we visited Palo Alto, and we started by meeting <a href="http://www.linkedin.com/profile/view?id=3874">Keith Teare</a> in his house. He is a serial entrepreneur who funded <a href="http://www.easynet.com/">Easynet</a>, <a href="http://en.wikipedia.org/wiki/RealNames">RealNames</a> and <a href="http://techcrunch.com/">TechCrunch</a> among others.</p>
+<p>He likes to build world-changing businesses and shared with us his thoughts to identify opportunities of this size. His suggestion is to develop a story about a-not-so-distant future that can be told convincingly and supported by some early product traction.</p>
+<p>His current project is <a href="http://chat.center/">Chat Center</a>, launched in 2014, a simple and mobile way for anyone to chat. He believes that the global messaging chat system is broken and this is the solution.</p>
+<p>Next we visited <a href="http://www.wepay.com/">WePay</a>, a Y Combinator startup (2009), and met co-founder <a href="http://www.linkedin.com/profile/view?id=28103652">Rich Aberman</a>. He gave us a tour of the company and we had an engaging discussion about the different challenges that needed to be solved to make a startup successful.</p>
+<p>As part of the discussion, he clarified that Uber and Airbnb have large payment teams as they were basically custom payment platforms that need to deal with the complexities of regulation since they collect money and pay third parties.</p>
+<p>After lunch we visited the <a href="http://startx.stanford.edu/">StartX</a> accelerator where we met with <a href="http://www.linkedin.com/profile/view?id=459036">Sten Tamkivi</a>, founder of <a href="http://teleport.org/">Teleport</a> in 2014.</p>
+<p>His application optimises the location of startup people since companies can operate remotely, taking advantage of better locations for different types or work. He mentions that for a startup it is attractive to get more &#39;technology done by the dollar&#39; by developing outside the Valley and San Francisco.</p>
+<p>From his experience as entrepreneur in residence at <a href="http://a16z.com/">Andreessen Horowitz</a>, he highlights that the entrepreneurs should pitch for a specific partner rather than the firm, since investments are very personal decisions.</p>
+<p>We ended the day back in San Francisco at the <a href="http://www.marsbarsf.com/">Mars Bar</a>, where we organised an open event for anyone who had an interest in talking to us. Personally, I met a friendly developer who introduced me to several Hacker Spaces in the city as well as other meetups that do not seem to be advertised publicly.</p>
+<h2 id="friday">Friday</h2>
+<p>We started our day with lunch at <a href="http://www.zesty.com/">Zesty</a>, a Y Combinator startup (2014), meeting the founders <a href="http://www.linkedin.com/profile/view?id=97380660">Chris Hollindale</a> and <a href="http://www.linkedin.com/in/davidlanger">David Langer</a>.</p>
+<p>They emphasised that a lot of determination is needed at the start. They believe that it is better to start in San Francisco than in London because after dominating the UK market all companies come to the USA. So it is best to start in the USA from the beginning.</p>
+<p>They also described their process to test their assumptions and how they pivoted from a B2C model to B2B model which has got traction. They keep a close eye on their weekly business performance and have started to build their team locally.</p>
+<p>Our last destination was in Mountain View at the <a href="http://www.hackerdojo.com/">Hacker Dojo</a>, a community of hackers and startups where we hosted a small event.</p>
+<p>We met <a href="http://www.linkedin.com/profile/view?id=2351155">Max Skibinsky</a>, an ex-venture partner at <a href="http://a16z.com/">Andreessen Horowitz</a>, now founder of <a href="http://www.vault12.io/">Vault 12</a>, a bitcoin startup.</p>
+<p>Based on his experience, he offered us his view on our particular businesses. He mentioned that the benefit of working for a VC was that he had access to all the competitors in a specific sector, so he could see the market as a whole. As a founder, we are limited to our particular view of the market.</p>
+<p>He mentioned that technology is used to extract inefficiencies of the current systems. So a new player has guns and tanks while the incumbents are attempting to protect their industry with arrows and swords.</p>
+<p>The last person we met was <a href="http://www.linkedin.com/profile/view?id=21240817">Eric Stern</a>, who was employee number one at <a href="http://www.wepay.com/">WePay</a>, and was the lead engineer.</p>
+<p>He stressed the need for good software practices such as testing and continuous integration and proper technical decisions based on experience to enable systems that can expand to new functionality while maintaining speed to market.</p>
+<p>He gave us an overview of the Ruby on Rails marketplace in the area and the challenges of working in a growing business powered by technology.</p>
+<p>Finally we joined the Hacker Dojo community, listened to lightning talks and enjoyed the happy hour before returning to San Francisco.</p>
+<p>The week after, now on our own initiative, we visited the <a href="http://www.computerhistory.org/">Computer History Museum</a>,
+<a href="http://www.ycombinator.com/">Y Combinator</a>, the Google Office, the Facebook Office, and <a href="http://www.stanford.edu/">Stanford University</a>.</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/06/05/san_francisco_and_silicon_valley_the_land_of_opportunity/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/06/05/san_francisco_and_silicon_valley_the_land_of_opportunity/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Fri, 05 Jun 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to use Middleware in NodeJS (ExpressJS example)]]></title>
+            <description><![CDATA[<p>From a web development perspective, middleware is a pipe (or series of pipes) that can read, update, or respond to in-transit HTTP requests before they reach their intended destination/route (ie. HTTP GET Request to <a href="www.example.com/about">www.example.com/about</a>). If you understand how it works, you can do infinitely fun and useful things with it.</p>
+<p>In <a href="http://expressjs.com">ExpressJS</a>, we can register custom or prebuilt middleware functions to the application as a callback with the <code>use()</code> method. Note that middleware functions take a <code>request</code>, <code>response</code>, and <code>next</code> object as parameters. I will explain what <code>next</code> does later.</p>
+<p>Let’s start with an example. When someone visits <a href="www.example.com">www.example.com</a> their request will be handled by the route below.</p>
+<pre class="highlight"><code class="hljs javascript">app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  fs.readFile(<span class="hljs-string">'./views/index.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, data)</span> </span>{
+    res.send(data.toString());
+  });
+});
+</code></pre>
+<p>But, before the request is sent to that route, it will first go through our middleware function.</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> randomString = <span class="hljs-string">"Chris-"</span>;
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middleware"</span>);
+  next();
+});
+</code></pre>
+<p>In the above example, I wrote middleware that assigns ‘randomString’ to <code>res.random</code>. I then pass the request/response objects onto the next middleware/route in queue by calling <code>next</code>. If I do not call <code>next</code>, the request/response objects will not be passed on and now more middleware will be triggered.</p>
+<p>The <code>use</code> method takes two parameters; an optional <code>path</code> and middleware
+function. By default, if you do not set the <code>path</code> option, all requests
+will be processed by the middleware. If you decided to assign path a value,
+only requests with a Request-URI header will be processed for the related middleware function.</p>
+<p>If you want only one middleware function to trigger for a specific route, make sure to call <code>use(path, yourMiddleware)</code> first before any others. Express will generate a chain of middleware that your request will go through based on the order of <code>use</code> calls.</p>
+<p>Let’s go through another example to hammer it in:</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+<span class="hljs-comment">//more middleware here similar to the ones</span>
+<span class="hljs-comment">//directly located below and above this comment</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+
+app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+</code></pre>
+<p>The output when a request to <a href="www.example.com">www.example.com</a> occurs:</p>
+<pre class="highlight"><code class="hljs livecodeserver"><span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">23</span>:<span class="hljs-number">49</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Processing application css
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think middleware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Processing application js
+</code></pre>
+<p>I will walk you through what just happened:</p>
+<p>When the http GET request for <a href="www.example.com">www.example.com</a> hits the server, it runs it through the middleware we set.
+The middleware for <code>/application.js</code> and <code>/application.css</code> isn’t
+triggered because the request’s header value for the Request-URI
+header doesn’t contain the path <code>/application.js</code> and <code>/application.css</code>.</p>
+<p>Once the request reaches the route, the server responds with <code>index.html</code>.
+<code>Index.html</code> contains link tags to <code>/application.js</code> and <code>/application.css</code> and the browser will request for those resources as the DOM is being rendered.</p>
+<p>As you can see, asset (css, js, images, etc) requests will be processed by most of the middleware stack with this configuration, which is what we don’t want. We want asset requests to be only processed by asset middleware.</p>
+<p>The next example shows you why order matters and how the <code>next()</code> function comes into play. As you can see, the middleware for css and js assets are sandwiched between the middleware that console logs random strings. Our expectation is any request on <code>/application.css</code> or <code>/application.js</code> will now only trigger the first two <code>randomString</code> middleware because of the way we structured the <code>use()</code> method calls.</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"123"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"2nd random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"is like a stream"</span>);
+  next();
+});
+
+app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"3rd random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"that flows and flows and flows"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+</code></pre>
+<p>Our hunch was correct! The result should be:</p>
+<pre class="highlight"><code class="hljs livecodeserver"><span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+<span class="hljs-number">3</span>rd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456</span>
+that flows <span class="hljs-operator">and</span> flows <span class="hljs-operator">and</span> flows
+<span class="hljs-number">4</span>th <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123456456</span>
+through pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">26</span>:<span class="hljs-number">10</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+Processing application css
+
+<span class="hljs-number">1</span>st <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd <span class="hljs-built_in">random</span> <span class="hljs-keyword">string</span>: Chris-<span class="hljs-number">123</span>
+is like <span class="hljs-operator">a</span> stream
+Processing application js
+</code></pre><p>Finally, our expectation now is an asset requests will only trigger related asset middleware with this configuration.</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-string">'/application.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application css"</span>);
+});
+
+app.use(<span class="hljs-string">'/application.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Processing application js"</span>);
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random = randomString;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"1st random string: "</span> + res.random);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I think middle ware"</span>);
+  next();
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"123"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"2nd random string: "</span> + res.random);
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"is like a stream"</span>);
+  next();
+});
+
+<span class="hljs-comment">//more middleware here similar to the ones</span>
+<span class="hljs-comment">//directly located below and above this comment</span>
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  res.random += <span class="hljs-string">"456"</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"4th random string: "</span> + res.random);
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"through pipes"</span>);
+  next();
+});
+</code></pre>
+<p>It works! The result:</p>
+<pre class="highlight"><code class="hljs applescript"><span class="hljs-number">1</span>st random <span class="hljs-type">string</span>: Chris-
+I think <span class="hljs-keyword">middle</span> ware
+<span class="hljs-number">2</span>nd random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123</span>
+<span class="hljs-keyword">is</span> like a stream
+<span class="hljs-number">3</span>rd random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123456</span>
+<span class="hljs-keyword">that</span> flows <span class="hljs-keyword">and</span> flows <span class="hljs-keyword">and</span> flows
+<span class="hljs-number">4</span>th random <span class="hljs-type">string</span>: Chris-<span class="hljs-number">123456456</span>
+<span class="hljs-keyword">through</span> pipes
+Served index.html <span class="hljs-keyword">at</span> Tue Mar <span class="hljs-number">11</span> <span class="hljs-number">2014</span> <span class="hljs-number">16</span>:<span class="hljs-number">28</span>:<span class="hljs-number">09</span> GMT-<span class="hljs-number">0700</span> (PDT)
+
+Processing <span class="hljs-type">application</span> css
+
+Processing <span class="hljs-type">application</span> js
+</code></pre>
+<p>So, what is the point? The ordering of your middleware is very important
+in express that middleware is fun and conceptually simple!</p>
+<p>P.S. Here’s a nice example of where middleware can also hijack requests and send its own responses:</p>
+<pre class="highlight"><code class="hljs javascript">app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I'm an angry middleware and I'm going to block all access to the site!"</span>);
+  res.send(<span class="hljs-string">"You're blocked because middleware is angry!"</span>);
+});
+
+app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  fs.readFile(<span class="hljs-string">'./views/index.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, data)</span> </span>{
+    res.send(data.toString());
+  });
+});
+</code></pre>
+]]></description>
+            <link>http://blog.codescrum.com/2015/05/29/Middleware_in_NodeJS/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/05/29/Middleware_in_NodeJS/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Fri, 29 May 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Single Sign On with Devise and Casino]]></title>
+            <description><![CDATA[<p>Nowadays it is very common to deal with multiple distributed services that need a Central Authentication System and a Single Sign In/Out feature.</p>
+<p>In this blog post we will present one of the simplest, yet effective solutions, which is the use of the <a href="http://jasig.github.io/cas/development/protocol/CAS-Protocol-Specification.html">CAS protocol</a>. CAS allows the authentication to be centralized and it is well suited for organizations that already have an existing user base.</p>
+<p>For our actual implementation of CAS SSO we used the <a href="http://casino.rbcas.com">CASino</a> ruby gem. We are going to see how we can integrate this with an existing project using <a href="https://github.com/plataformatec/devise">devise</a> and Rails 3 and 4. The overall single sign on mechanism for our service is shown in the image below.</p>
+<p><img src="/images/blog/sso_diagram.png" alt="Single Sign On diagram"></p>
+<h2 id="casino">CASino</h2>
+<p>First of all lets talk about CASino. CASino is an easy to use Single Sign On (SSO) web application written in ruby. It supports multiple backends and authentication methods through modules called <em>Authenticators</em>.</p>
+<p>They provide a ready to use Rails 3 application called <a href="https://github.com/rbCAS/CASinoApp">CASinoApp</a> that we can download (clone) and configure easily with the instructions provided in their website, which serves as the authentication server. To summarise, we only need to configure a database authenticator to connect with a <em>Users</em> collection in a <em>MongoDB</em> (you can use any other ODM/ORM too) database using the <em>email</em> and <em>password</em> fields in the <em>cas.yml</em> file. For this example we used a third party authenticator to support MongoDB called <a href="https://github.com/digitalnatives/casino-moped_authenticator">casino-moped_authenticator</a>, instead of the default one for ActiveRecord.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># cas.yml</span>
+
+<span class="hljs-symbol">development:</span>
+  <span class="hljs-symbol">frontend:</span>
+    <span class="hljs-symbol">sso_name:</span> <span class="hljs-string">'SSO Example Server'</span>
+    <span class="hljs-symbol">footer_text:</span> <span class="hljs-string">'Powered by &lt;a href="http://rbcas.com/"&gt;CASino&lt;/a&gt;'</span>
+  <span class="hljs-symbol">authenticators:</span>
+     <span class="hljs-symbol">sso_example_database:</span>
+      <span class="hljs-symbol">authenticator:</span> <span class="hljs-string">"Moped"</span>
+      <span class="hljs-symbol">options:</span>
+        <span class="hljs-symbol">database_url:</span> <span class="hljs-string">"mongodb://localhost:27017/sso_example"</span>
+        <span class="hljs-symbol">collection:</span> <span class="hljs-string">"users"</span>
+        <span class="hljs-symbol">username_column:</span> <span class="hljs-string">"email"</span>
+        <span class="hljs-symbol">password_column:</span> <span class="hljs-string">"encrypted_password"</span>
+</code></pre>
+<h2 id="rails-3-example-application">Rails 3 example application</h2>
+<p>To enable the SSO with CAS in a current application using <a href="https://github.com/plataformatec/devise">Devise</a> we use a replacement for the <em>database_authenticatable</em> module of devise called <a href="https://github.com/nbudin/devise_cas_authenticatable">devise_cas_authenticatable</a>. This comes as a gem which we just normally install as usual in our gemfile.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment">#Gemfile</span>
+<span class="hljs-comment"># devise_cas_authenticatable</span>
+gem <span class="hljs-string">'devise_cas_authenticatable'</span>
+</code></pre>
+<p>Once it is installed we head on to configure the project to use it.</p>
+<h3 id="devise">Devise</h3>
+<p>We need to configure the <em>config/initializers/devise.rb</em> with some already bundled configurations explained in their website, we use:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment">#config/initializers/devise.rb</span>
+<span class="hljs-comment"># ==&gt; Configuration for SSO server authentication</span>
+<span class="hljs-comment"># Url pointing to the CASino SSO server</span>
+config.cas_base_url = <span class="hljs-string">"http://localhost:4000"</span>
+<span class="hljs-comment"># Tell devise_cas_authenticatable not create users if they do not exist</span>
+config.cas_create_user = <span class="hljs-keyword">false</span>
+<span class="hljs-comment"># Instead username we use email for login field</span>
+config.cas_username_column = <span class="hljs-string">"email"</span>
+<span class="hljs-comment"># After logout we use a 'destination' url to be redirected</span>
+config.cas_logout_url_param = <span class="hljs-string">"destination"</span>
+<span class="hljs-comment"># The url for redirect after logout</span>
+config.cas_destination_url = <span class="hljs-string">"http://localhost:3000/"</span>
+<span class="hljs-comment"># Parameter required for CASino logout to work</span>
+config.cas_destination_logout_param_name = <span class="hljs-string">"service"</span>
+<span class="hljs-comment"># Enable single sign out</span>
+config.cas_enable_single_sign_out = <span class="hljs-keyword">true</span>
+</code></pre>
+<h3 id="routes">Routes</h3>
+<p>In the <em>config/routes.rb</em> file we configure the user sessions to use the <em>devise_cas_authenticatable</em> sessions controller.</p>
+<pre class="highlight"><code class="hljs ruby">devise_for <span class="hljs-symbol">:users</span>, <span class="hljs-symbol">:controllers</span> =&gt; {<span class="hljs-symbol">sessions:</span> <span class="hljs-string">'devise/cas_sessions'</span> }
+</code></pre>
+<h3 id="user-model">User model</h3>
+<p>Finally the User model must be modified to avoid the regular database authentication, we replace the database_authenticatable module with cas_authenticatable.</p>
+<pre class="highlight"><code class="hljs ruby">devise <span class="hljs-symbol">:cas_authenticatable</span> <span class="hljs-comment">#, your other devise modules</span>
+</code></pre>
+<h3 id="rails-4-application">Rails 4 application</h3>
+<p>The <em>devise_cas_authenticatable</em> module works with Rails 4 but there are still some issues that need to be resolved.</p>
+<p>First of all we need to override the Devise::CasSessionsController that comes with <em>devise_cas_authenticatable</em></p>
+<p>In the <em>config/routes.rb</em> file:</p>
+<pre class="highlight"><code class="hljs ruby">devise_for <span class="hljs-symbol">:users</span>, <span class="hljs-symbol">skip:</span> [<span class="hljs-symbol">:sessions</span>], <span class="hljs-symbol">controllers:</span> { <span class="hljs-symbol">cas_sessions:</span> <span class="hljs-string">'our_cas_sessions'</span> }
+</code></pre>
+<p>In controllers/our_cas_sessions_controller.rb</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OurCasSessionsController</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Devise::CasSessionsController</span></span></span>
+  <span class="hljs-comment"># Skip redirect_to_sign_in to fix</span>
+  <span class="hljs-comment"># flash message not showing up in Rails 4</span>
+  <span class="hljs-comment"># (https://github.com/nbudin/devise_cas_authenticatable/issues/81)</span>
+
+  skip_before_filter <span class="hljs-symbol">:redirect_to_sign_in</span>,
+  <span class="hljs-symbol">only:</span> [<span class="hljs-symbol">:new</span>, <span class="hljs-symbol">:destroy</span>, <span class="hljs-symbol">:single_sign_out</span>, <span class="hljs-symbol">:service</span>, <span class="hljs-symbol">:unregistered</span>]
+
+  <span class="hljs-comment"># Skip verify_signed_out_user for Devise &gt;= 3.3.0</span>
+  skip_before_filter <span class="hljs-symbol">:verify_signed_out_user</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="single-sign-out">Single Sign Out</h2>
+<p>The <em>CASino</em> application also supports a Single Sign Out solution, but for this to work we cannot use the default cookie session store mechanism, instead we need to use a persisted session store. For the session store we recommend using <em>redis</em> and the <a href="https://github.com/redis-store/redis-rails">redis-rails</a> gem can help us with this.</p>
+<p>To change the session store in our application we edit the <em>config/initializers/session_store.rb</em> file:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/session_store.rb</span>
+
+<span class="hljs-constant">Rails</span>.application.config.session_store <span class="hljs-symbol">:redis_store</span>,
+<span class="hljs-symbol">redis_server:</span> <span class="hljs-string">"redis://127.0.0.1:6379/0/_sso_rails3_example_app_session"</span>
+</code></pre>
+<p>Note that we have specified the <em>redis_server</em> to use in the initializer file, which will be needed if you plan to use this in a distributed environment.</p>
+<p>For Rails 4 we had another problem with the devise_cas_authenticatable because the <em>DeviseCasAuthenticatable::SingleSignOut</em> module does not work with redis store, for that reason we did a fork of the project and fixed that, so in the <em>Gemfile</em> we change the gem to use the fork:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Gemfile</span>
+
+<span class="hljs-comment"># Use redis to store Rails Sessions</span>
+gem <span class="hljs-string">'redis-rails'</span>
+<span class="hljs-comment"># For CAS authentication with SSO example server</span>
+gem <span class="hljs-string">'devise_cas_authenticatable'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'https://github.com/jpamaya/devise_cas_authenticatable'</span>
+</code></pre>
+<h2 id="wrap-up">Wrap up</h2>
+<p>To test this Single Sign On solutions is better to have at least two client applications configured to see the magic of the Single Sign In and Single Sign Out mechanism. We have prepared three example apps ready for you to try out this already: one with a <a href="https://github.com/codescrum/casino-sso-server-example">casino server example</a> and two others for the client application examples, one for <a href="https://github.com/codescrum/casino-sso-client-rails3-example">Rails 3</a> and another one for <a href="https://github.com/codescrum/casino-sso-client-rails4-example">Rails 4</a>.</p>
+<p>Thats all for now, hope you find this useful as a way of implementing Single Sign On (and Single Sign Out) in a simple way, see you in the next blog post!</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Tue, 31 Mar 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Deploy your Rails and AngularJS app]]></title>
+            <description><![CDATA[<p>In our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a>, we successfully configured our server-side and client-side applications in a decoupled way in a development environment, but what about deploying on a different environment (i.e. staging, production)?, how would we join our applications together and deploy them as one?.</p>
+<p>Well, there are at least two ways to deploy our application and it basically depends on the following:</p>
+<ol>
+<li>When we have total control of the filesystem of the target server.</li>
+<li>When we don&#39;t (as it occurs with Heroku, because of its Ephemeral Filesystem)</li>
+</ol>
+<p>In any of the cases above we have two other sub-options:</p>
+<p>a. Copy the generated client-side files (i.e. under <code>frontend/dist</code> folder) to the Rails application public folder (or the corresponding assets folder for js, css, etc.) before pushing (the generated files are checked in version control for this to work).</p>
+<p>b. Use lineman on the remote server to build the client application from its source files and copy the generated files to the Rails application to its final location, as in option <em>a</em>.</p>
+<p>If we choose option <em>a</em>, then we can push the bundled-ready-to-operate application to our remote server, provided we have generated all needed files in our development machine and committed the changes.</p>
+<p>On the other hand, if we choose option <em>b</em> we don&#39;t have to commit the generated files, thus reducing the size of the our version-controlled repository, but in contrast, running the generation on the server could take more time and be more complex to setup (since you need nodejs and lineman and all the other things to be able to generate the files).</p>
+<p>Depending on what you need and if you do or do not want to commit generated files in version control, you can choose between these two, so we will leave that to you, but we will present both alternatives.</p>
+<p><strong>Note:</strong> As mentioned earlier these apply to the example app from our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a>.</p>
+<h3 id="generate-the-client-side-application-before-pushing-option-a-">Generate the client-side application before pushing (option <em>a</em>)</h3>
+<p>Let&#39;s assume you have all changes ready, and you wish to push your app to Heroku, but could be other platform or your own server at this point. The steps you would need to perform are the following:</p>
+<p>Generate the frontend app files.</p>
+<pre class="highlight"><code class="hljs sh">$ lineman build
+</code></pre>
+<p>This will generate all the app into the <code>frontend/dist</code> folder. Then, for example, manually (or via a single &quot;cp&quot; line script) copy this folder&#39;s contents into the Rails <code>public</code> folder (which we recommend), or painstakingly copy the corresponding files into each of the <code>assets</code> folders for the asset pipeline to work, which we do not recommend since all the minify, uglify and fingerprinting are already performed by lineman.</p>
+<pre class="highlight"><code class="hljs sh">$ cp -R frontend/dist/* public/
+</code></pre>
+<p>lastly, commit these changes to the repo.</p>
+<pre class="highlight"><code class="hljs sh">$ git commit -am ‘add client application version x.y.z’
+</code></pre>
+<p>In any case we could write a script to do this and later deploy. Note that we will be overriding the generated files each time we deploy, but that&#39;s pretty much it, you app would be deployed without any &quot;special&quot; steps.</p>
+<h3 id="generate-the-client-side-application-after-pushing-option-b-">Generate the client-side application after pushing (option <em>b</em>)</h3>
+<p>As we mentioned before, this process is truly more complex compared to the previous one, but the good news is that there is already the <a href="https://github.com/linemanjs/rails-lineman">rails-lineman</a> gem to helps us deal with this. However we did some tweaks of our own to the gem to improve the possible scenarios for deployment that it could manage. With this option you do not have to commit any generated files, only the source ones.</p>
+<h3 id="overview-of-the-rails-lineman-gem">Overview of the rails-lineman gem</h3>
+<p>Generally speaking, this gem adds the CSS and JS files built by Lineman and adds them to asset pipeline like any other asset in a Rails application. While this is good for some situations where the views are built by Rails and the CSS and JS by Lineman separately, we would like to just be able to copy our generated files without any Rails intervention or dependency on its views.</p>
+<h3 id="improving-the-rails-lineman-gem">Improving the rails-lineman gem</h3>
+<p>For the purpose of exploring the deployment solution we modified the rails-lineman gem adding it a new deployment method, which is just to copy our AngularJS client application to the rails public folder and not use rails assets precompile feature at all, however you can switch to the asset pipeline feature if you want. For now, we have our own fork of the gem <a href="https://github.com/degzcs/rails-lineman">here</a>. The modified gem dynamically generates one of the two following rake tasks, depending on the deployment method you choose:</p>
+<ul>
+<li><p><code>assets:precompile</code> , which adds the client application assets to the Rails asset pipeline flow (if you choose the :asset_pipeline method)</p>
+</li>
+<li><p><code>deploy:frontend</code> which runs Lineman and copy/pastes all files into <code>dist</code> folder to the Rails public folder.</p>
+</li>
+</ul>
+<p>To choose one of the two deployment methods you have to setup your Rails application configuration <code>config/application.rb</code> the <code>deployment_method</code> option, as follows:</p>
+<pre class="highlight"><code class="hljs ruby">config.rails_lineman.deployment_method = <span class="hljs-symbol">:asset_pipeline</span>
+</code></pre>
+<p>or</p>
+<pre class="highlight"><code class="hljs ruby">config.rails_lineman.deployment_method = <span class="hljs-symbol">:copy_files_to_public_folder</span>
+</code></pre>
+<h3 id="deployment-method-processes">Deployment method processes</h3>
+<p>When you choose the :asset_pipeline then the rake task <code>assets:precompile</code> will be overridden by the rails-lineman gem, so the deployment process will be like:</p>
+<ol>
+<li><p>You invoke the command you use to deploy the application to the server (e.g. by using <a href="http://capistranorb.com">Capistrano</a> or by pushing to Heroku or any platform of your choice) this process and setup is up to you.</p>
+</li>
+<li><p>The <code>assets:precompile</code> rake task will be run, which will:</p>
+<ul>
+<li>Install NodeJS and Lineman with npm if not already available (just for Heroku, the gem checks for this particular case).</li>
+<li>Build the client application assets (e.g. css and js files ) using Lineman. The generated output goes to the <code>frontend/dist</code> folder.</li>
+<li>Add the client asset paths from <code>frontend/dist</code> to the Rails asset_path so that they are precompiled together.</li>
+</ul>
+</li>
+<li><p>The Rails app will be started and ready to go!.</p>
+</li>
+</ol>
+<p>On the other hand, when you choose the :copy_files_to_public_folder option the process will be:</p>
+<ol>
+<li><p>You invoke the command you use to deploy the application to the server (e.g. by using <a href="http://capistranorb.com">Capistrano</a> or by pushing to Heroku or any platform of your choice) this process and setup is up to you.</p>
+</li>
+<li><p>The Rails app will be started, and <strong>afterwards</strong> this will happen:</p>
+<ul>
+<li>Install NodeJS and Lineman with npm if not already available (just for Heroku, the gem checks for this particular case).</li>
+<li>Build the client application assets (e.g. css and js files ) using Lineman. The generated output goes to the <code>frontend/dist</code> folder.</li>
+<li>Copy all these generated files to the rails public folder).</li>
+</ul>
+</li>
+</ol>
+<p>Be sure to <em>gitignore</em> the <code>frontend/node_modules</code>, <code>frontend/generated</code> and the <code>frontend/dist</code> folders and be careful to not gitignore all the <code>frontend</code> folder. This way you only have the source files in your version control.</p>
+<h3 id="deploying-the-example-app">Deploying the example app</h3>
+<p>Ok, now that we have explained a little bit about that, let&#39;s continue deploying our example app. We will use the <code>:copy_files_to_public_folder</code> deployment method and deploy to Heroku, where we do not have complete control over our filesystem, so that you can test this without acquiring a dedicated machine.</p>
+<h3 id="heroku">Heroku</h3>
+<p>install <a href="https://github.com/degzcs/rails-lineman">our fork of rails-lineman</a>(version 0.3.1).</p>
+<p>To do so, add to your Gemfile:</p>
+<pre class="highlight"><code class="hljs sh">gem <span class="hljs-string">'rails-lineman'</span>, github: <span class="hljs-string">'degzcs/rails-lineman'</span>
+</code></pre>
+<p>setup/update the <code>config/application.rb</code>, as per the README, like this:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Integrate with lineman</span>
+config.rails_lineman.lineman_project_location = <span class="hljs-string">"frontend"</span>
+config.rails_lineman.deployment_method = <span class="hljs-symbol">:copy_files_to_public_folder</span>
+</code></pre>
+<p>Commit all changes and push to Heroku!</p>
+<pre class="highlight"><code class="hljs sh">$ git push heroku master
+</code></pre>
+<p>You can see this app running on heroku <a href="https://rails-angular-lineman-example.herokuapp.com">here</a> and grab the code from <a href="https://github.com/degzcs/rails-angular-lineman-example">here</a>.</p>
+<p><img src="/images/blog/rails_angular_example_3.png" alt="Deployed Rails AngularJS App"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>There are many ways in which you can organize, separate and deploy your project, this is proposed approach way of dealing with this specific technology pairing (AngularJS/Rails). This post plugs in with our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a> just in case you wonder why we are eperimenting with these deployment methods.</p>
+<p>Other awesome related projects worth checking out are Meteor, Gyoman, Ember, Sails, MEAN, and a bunch of others.</p>
+<p>We hope this information helps you to start with these awesome technologies. See you around!</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Tue, 17 Mar 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Organize your Rails and AngularJS app with Lineman]]></title>
+            <description><![CDATA[<p>Modern (edge) web applications tend to decouple client-side on the browser and server-side as cleanly as possible in order to reuse components for other types of clients (native mobile apps, third party applications and other systems). In this post we will share our way of organizing such a project.</p>
+<p>In short, we wanted to find out what is the best way (it&#39;s our opinion here, there are many &quot;best&quot; ways) to carry out our development workflow using a Rails application as an API and an AngularJS application as a first-class JavaScript enabled frontend web app (pure browser-based client). We want:</p>
+<ul>
+<li>Well organized project structure.</li>
+<li>Totally decoupled Angular frontend from the Rails JSON API backend.</li>
+</ul>
+<p>In our research we found a useful command line called <a href="http://linemanjs.com/">Lineman</a>, which is an utility based on Grunt that makes a basic structure of our client-side application and defines a simple workflow that can be customized. It also comes with cool advanced features one of which is <strong>api proxying</strong>, which allow us to integrate and switch with our server side app (our JSON API) forwarding any requests that it doesn&#39;t know how to respond to, to a proxy service.</p>
+<p>Below, we will show you how to create a basic application to demonstrate the client-server communication of the Lineman-based Angular application with the Rails application backend (using nothing else but JSON) and we will pretend to log into the app with a simple fake authentication mechanism for demonstration purposes.</p>
+<p>So let’s start coding!</p>
+<h2 id="development-environment">Development environment</h2>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<ul>
+<li>Have Ruby installed (we are using Ruby 2.2.0)</li>
+<li>Have Rails installed (we are using Rails 4.1.9)</li>
+<li>Have NodeJS installed (we are using Node 0.10.32)</li>
+</ul>
+<p>Let&#39;s get started by installing Lineman</p>
+<pre class="highlight"><code class="hljs sh">npm install lineman -g
+</code></pre>
+<p>You can create a Lineman-based Angular application from scratch or use this <a href="https://github.com/linemanjs/lineman-angular-template">AngularJS project template</a> available on github which was created by David Mosher. This contains a basic Angular authentication app developed with Lineman. So, we will use this application in our example.</p>
+<p>To start, we will create an application with rails:</p>
+<pre class="highlight"><code class="hljs sh">rails new rails-angular-lineman-example
+</code></pre>
+<p>Then add the angular project from Github inside of this rails project, this will help us to next steps integrate with rails app and deploy easier:</p>
+<pre class="highlight"><code class="hljs sh"><span class="hljs-built_in">cd</span> rails-angular-lineman-example
+git clone https://github.com/linemanjs/lineman-angular-template.git frontend
+<span class="hljs-built_in">cd</span> frontend
+npm install
+</code></pre>
+<p>Project structure should look like this:</p>
+<pre class="highlight"><code class="hljs sh">└── rails-angular-lineman-example
+    ├── app
+    ├── config
+    ...
+    ├── frontend  <span class="hljs-comment"># our frontend/ folder, inside the Rails app</span>
+    ...
+</code></pre>
+<p>Setup your client-side app to use the api proxing feature that we talked about before by going into <code>frontend/config/application.js</code>, to configure your connection to the backend server (i.e. your Rails app) as follows:</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-comment">//...</span>
+server: {
+      pushState: <span class="hljs-literal">false</span>,
+      apiProxy: {
+        enabled: <span class="hljs-literal">true</span>,
+        host: <span class="hljs-string">'localhost'</span>,
+        port: <span class="hljs-number">3000</span>,
+      }
+    }
+<span class="hljs-comment">//...</span>
+</code></pre>
+<p>Also enable Lineman asset fingerprinting feature in this file, as follows:</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-comment">//...</span>
+enableAssetFingerprint: <span class="hljs-literal">true</span>
+<span class="hljs-comment">//...</span>
+</code></pre>
+<p>Moreover, the lineman-angular-template mocks the server-side by default (which is good for developing our application without any backend) but we are going to comment out all lines from <code>frontend/config/server.js</code> so that they do not override the connection to our local Rails server. Now, we will go to our Rails app code and add the &quot;login&quot; and &quot;logout&quot; routes and actions to demo the connection.</p>
+<p>We will update,  <code>app/routes.rb</code> as follows:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Rails</span>.application.routes.draw <span class="hljs-keyword">do</span>
+  post <span class="hljs-string">'login'</span> =&gt; <span class="hljs-string">'application#login'</span>
+  post <span class="hljs-string">'logout'</span> =&gt; <span class="hljs-string">'application#logout'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>We will add the corresponding actions to <code>app/controllers/application_controller.rb</code> file</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationController</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActionController::Base</span></span></span>
+  <span class="hljs-comment"># Prevent CSRF attacks by raising an exception.</span>
+  <span class="hljs-comment"># For APIs, you may want to use :null_session instead.</span>
+ protect_from_forgery <span class="hljs-symbol">with:</span> <span class="hljs-symbol">:null_session</span> <span class="hljs-comment"># To simplify our demo</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>login
+    render <span class="hljs-symbol">json:</span> { <span class="hljs-symbol">message:</span> <span class="hljs-string">'logging in!'</span> }
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>logout
+    render <span class="hljs-symbol">json:</span>{ <span class="hljs-symbol">message:</span> <span class="hljs-string">'logging out!'</span>}
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Notice that we put <code>protect_from_forgery with: :null_session</code> ( or just <code>protect_from_forgery</code> ) in order to empty the session on requests but doesn&#39;t reset it completely. We did this on purpose and on a later post we will show how to use basic token authentication for this.</p>
+<p>Now back in our client-side app (which is inside the Rails app, under the &quot;frontend&quot; folder), notice that in <code>frontend/app/js/router.js</code> the AngularJS HTML5 mode is enabled, this means that Angular will use regular URLs in modern browsers and Hashbang urls in older ones (e.g. &quot;localhost:8000/logout&quot; instead of &quot;localhost:8000/#/logout&quot;). However, we want to only use Hashbang URLs to avoid raising routing errors in Rails when navigating directly to a url in the address bar of the browser. So, go to <code>frontend/app/js/router.js</code> and change the HTML5 mode to false or comment out the line (same effect) like this:</p>
+<pre class="highlight"><code class="hljs javascript"> <span class="hljs-comment">//...</span>
+ $locationProvider.html5Mode({enabled:<span class="hljs-literal">false</span>});
+ <span class="hljs-comment">//...</span>
+</code></pre>
+<p>Learn more about HTML5 Mode and Hashbang mode <a href="https://docs.angularjs.org/guide/$location">https://docs.angularjs.org/guide/$location</a>.</p>
+<p>Now, it&#39;s time to start our frontend app with Lineman:</p>
+<pre class="highlight"><code class="hljs sh">lineman run
+</code></pre>
+<p>This command will run all development Grunt tasks to generate all the js, css and html files into the <code>frontend/generated</code> folder, also this command starts a server in port 8000 where you can check your application.</p>
+<p>Finally, we start our rails server which just works as the JSON API for our app:</p>
+<pre class="highlight"><code class="hljs sh">bundle <span class="hljs-keyword">exec</span> rails server
+</code></pre>
+<p>Go to <a href="http://localhost:8000">localhost:8000</a>. You can hit login and see how your client interacts with your Rails server for the &quot;/login&quot; and &quot;/logout&quot; routes.</p>
+<p><img src="/images/blog/rails_angular_example_1.png" alt="Microservices example structure"></p>
+<p>And after logging in</p>
+<p><img src="/images/blog/rails_angular_example_2.png" alt="Microservices example structure">
+Cool! right?</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Lineman offers one simple and useful way to organize our project and allow us to decouple our client and server side code. We can take advantage of the many features it provides.</p>
+<p>In our next post we will show you how you can deploy our example to Heroku in an easy way. See you around!</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Fri, 20 Feb 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[8 awesome online whiteboard tools for 2015]]></title>
+            <description><![CDATA[<p>A very important part of a project inception stage is to communicate effectively with all participants in order to understand and contextualize what the main objective is, and at the same time, expose what they think possible solutions may look like.</p>
+<p>Sometimes, a client may already have an idea about the product, and depending on the type of project, this can range from a single conceptual idea to a more elaborated design on wireframes or a even a complete design.</p>
+<p>This is a very common scenario and in these last days here at Codescrum our team has been thinking on improving certain parts of the initial inception stage for the case in which a client only has a very vague idea of what he wants or needs.</p>
+<p>In many opportunities a very fun part of this process is to draw by hand and brainstorm about how possible solutions might look like. For many internal projects our team uses a physical whiteboard to quickly present and discuss ideas, but when dealing with remote teams this has to be done differently.</p>
+<p>Sometimes, all we would wish to have is just a straightforward way to draw and discuss ideas as we would on a real whiteboard, and that&#39;s why we would like to share a list of tools that may help you out with that too.</p>
+<p>For our case, we need to understand how tools and solutions compare to each other in different criteria such as latency, flexibility, social interaction, history support, etc.</p>
+<p>We took into account the following criteria for our comparison:</p>
+<p><strong>Pricing plans:</strong> we took note of the different subscription plans and if a free plan was also available.</p>
+<p><strong>Freehand precision:</strong> sometimes we begin our designs and sketches using a pen on a tablet, but many times the touch response and stroke precision for online web applications is not comparable with what native applications can provide.</p>
+<p>Many freehand web applications simplify the strokes by decreasing the sampling for vector paths, while this may be good for performance, optimization and abstraction (object-oriented) purposes, sometimes we have wanted to write words without using text boxes, unfortunately with the path simplification process our handwriting is unreadable. We decided to incorporate a criteria which measures qualitatively how well the tools perform on this matter. We simplified this qualification by only allowing  &#39;high&#39; (better precision), &#39;medium&#39; and &#39;low&#39; scores. Take into account that the &#39;high&#39; score is not comparable to a native&#39;s application response but it is tolerable in terms of legibility (the final stroke is very similar to what the user intended) and latency (stroke feedback time) but is not related to touch sensitivity or &#39;anti-aliasing&#39; capabilities.</p>
+<p><strong>Latency:</strong> the perceived delay of response/replication in a collaborative environment between all collaborators when one of them is making a change. Possible values are: high (more than 2 seconds), medium (2 second approx.) and low (less than 1 second).</p>
+<p><strong>Board number:</strong> maximum number of boards supported on both the free plan (if it exists) and paid plan (basic plan).</p>
+<p><strong>Undo:</strong> this may sound incredible, perhaps one of the most important features, you may want to easily undo any changes you have made to have more control over the final form of your drawing.</p>
+<p><strong>Eraser:</strong> this feature can be different according the way the tool manages paths and sketches, it could be done through the deletion of objects or as a traditional pixel-based eraser (bitmap).</p>
+<p><strong>Object oriented:</strong> if the tool is able to manage primitive shapes, strokes, and other graphic representations as objects. This facilitates the resize, translation, rotation and other manipulations.</p>
+<p><strong>Move/cut:</strong> it means that you can move or cut previously drawn shapes or strokes that you have in your board.</p>
+<p><strong>Duplication:</strong> via copy/paste or similar, a way to duplicate portions of the drawing.</p>
+<p><strong>Highlight:</strong> ability to highlight items or regions on the board (like when using a highlighting pen).</p>
+<p><strong>Clear all:</strong> ability to clear all content on the board through in a single step.</p>
+<p><strong>Text:</strong> support for inserting text through a textbox, directly from the keyboard</p>
+<p><strong>Comments:</strong> support for adding comments in any part of the board, this is different to the &quot;Text&quot; criteria in that it can support a social interaction allowing the participants to interact through a thread of messages per each comment .</p>
+<p><strong>Sticky notes:</strong> the classic sticky notes are a common tool in most design methodology processes (brainstorming, business modeling, graphic design, development evolution, etc), sticky notes support means that the application lets you use them very similarly as you would with a real-world sticky note.</p>
+<p><strong>Task management:</strong> probably this feature is not necessary to start with, but it could be an interesting tool for big teams.</p>
+<p><strong>Resizable board:</strong> it refers to the ability to manipulate (indirectly or directly) the size of the board. If this feature is not present then the board has a predefined size that fits within the screen size instead.</p>
+<p><strong>Sections support:</strong> it refers to the ability to segment the whiteboard using taggable areas or regions that can support simple flows of navigation (think Prezi when navigating).</p>
+<p><strong>Primitives support:</strong> the ability to insert predefined shapes like squares, circles, etc.</p>
+<p><strong>Images:</strong> including images in the whiteboard is supported.</p>
+<p><strong>External files:</strong> the tool integrates external files (other than images). E.g. PDFs, documents, presentations, videos, etc) with the whiteboard.</p>
+<p>The other criteria/features are pretty much self-explanatory.</p>
+<p>And of course, here is the table you have been waiting for!</p>
+<p><div class="thumbnails yoxview">
+  <a href="https://raw.githubusercontent.com/codescrum/blog/gh-pages/images/blog/online_whiteboard_tools_comparison.png"><img src="https://raw.githubusercontent.com/codescrum/blog/gh-pages/images/blog/online_whiteboard_tools_comparison.png" alt="Table Comparison" title="Whiteboard Tools Table Comparison"></a>
+</div></p>
+<p style="font-size: 10px;">
+  object oriented (<code>*</code>): it means that only some graphic representations behave as objects
+</p>
+<p style="font-size: 10px;">
+  collaborators (<code>*</code>): it means that the collaborators have a Guest role
+</p>
+
+<p>Above is a summarized comparison table with our pick for 8 online whiteboard platforms. We took some time and experimented with each of them on more than 30 usage criteria.</p>
+<p>Here are the tools (web applications) that we’ve covered:</p>
+<p>###<a href="https://awwapp.com">AWW App</a>
+Pretty simple and lightweight application to use, with high stroke precision. Our main issue appeared when using it through mobile devices (iPhone, iPad, etc.) since it is too difficult to resize the active area. It is very easy to start working with, no distractions, fast to load, there is a premium plan but is related to plugin implementation. A nice thing is that everyone with the link can access the board, bad news is that you cannot increase board size.</p>
+<p>###<a href="https://realtimeboard.com">Realtime Board</a>
+It is a great tool even it has a considerable loading time, it is not available for mobile devices, and the free plan allows you create up to 3 private boards but must be used in <strong>non-commercial projects</strong>.  Even though the strokes that you create are simplified it still relates very well to your original design and is easy to use through a pen and tablet. Controls have nice shortcuts. You can export your drawing in multiple formats as well as selecting a specific area to export but you need to have a premium account to export in high resolution. You can define sections and this lets you present the drawing in a <a href="http://prezi.com/">prezi</a>-like manner, also when you have defined your presentation you can export it as a pdf file. An interesting thing is that you can integrate many predefined objects and templates even your Google Drive documents.</p>
+<p>###<a href="http://whiteboardfox.com/">Whiteboard Fox</a>
+Also a very simple tool, lightweight and cross-platform (works well with desktop and mobile devices) and for now it does not have a premium plan. You have a resizable board, and good collaboration features (up to 10 members). A missing feature is that there are no shortcuts to execute some common actions (choose pencil, undo, etc). You can also export your board and insert images and text, but you can not duplicate your shapes and strokes or do any kind of selection, but if your objects are images or text you can move them.</p>
+<p>###<a href="http://webwhiteboard.com/">Web Whiteboard</a>
+This tool is very easy to use, it is a little slow compared to other options but it is interesting approach because of its simplicity. Unfortunately the board is not resizable but you can protect your board by using a password, it is still under development but at the time of this writing the current version is stable, for now there is no premium plan, you can work from your mobile but the tool is not mobile-optimised.</p>
+<p>###<a href="https://conceptboard.com">Conceptboard</a>
+It is a complete tool with awesome features, it is interesting how the design process can be integrated too. It has a tool to track all activities and it allows to define tasks and also comes with very good communication features like chat, comments and even video (as a premium feature), you can also include almost any document/file that you want in the board, it has an interesting notification support an it splits the review step from the design step in two tabs and you can define regions to present the board like Prezi too. Mobile devices support is not completely optimised but in an emergency case is still usable through your mobile phone. In the free plan you can have unlimited guest users, they can also edit and participate in all the workflow. It also has predefined shortcuts that can be useful.</p>
+<p>###<a href="http://www.twiddla.com">Twiddla</a>
+This tool has interesting features but some of them seem strange from a whiteboard tool to provide them. A nice thing is that you can use the voice conference for free, but you need to buy the license if you want to track or save your work. You can also integrate media objects, documents, and even code and math equations, but the app feels kind of sluggish sometimes.</p>
+<p>###<a href="http://www.groupboard.com/">Groupboard</a>
+It is a simple and well known tool with the regular features. The initial setup for a free account feels kind of awkward, and we had problems with the presence of participants. The free plan has some advertising but an interesting thing is you can embed your board in your page.</p>
+<p>###<a href="http://www.scribblar.com/">Scribblar</a>
+A great tool mostly oriented at learning in the sense that it comes with interesting features like: <a href="http://www.wolframalpha.com/">wolfram alpha</a> integration, shared pointer, a section for lesson materials, equation editor and so on. It also includes the basic set of common features for whiteboards and the conference feature too. This tool may not be very suited for businesses or agencies but certainly is a good choice for academics.</p>
+<p>##Final Conclusion
+If you have a big team and need to work with a particular tool through a whole stage of your iterative development or design process, probably you should go with <a href="https://conceptboard.com">Conceptboard</a> or <a href="https://realtimeboard.com">Realtime Board</a>, given the number of features they provide. For simple and quick scenarios (sporadic meetings or simple and small conferences) you can use <a href="https://awwapp.com">AWW App</a>, <a href="http://whiteboardfox.com/">Whiteboard Fox</a> (just take into account the 10 participant limit) or <a href="http://webwhiteboard.com/">Web Whiteboard</a>. Finally If you need a tool as a excellent complement to a learning process probably you should use <a href="http://www.scribblar.com/">Scribblar</a>.</p>
+<p>This is our selection and insights, What do you think about these tools?. Do you have any other ones you would like to share?</p>
+]]></description>
+            <link>http://blog.codescrum.com/2015/01/23/8_awesome_online_whiteboard_tools_for_2015/index.html</link>
+            <guid isPermaLink="true">http://blog.codescrum.com/2015/01/23/8_awesome_online_whiteboard_tools_for_2015/index.html</guid>
+            <dc:creator><![CDATA[Codescrum]]></dc:creator>
+            <pubDate>Fri, 23 Jan 2015 05:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

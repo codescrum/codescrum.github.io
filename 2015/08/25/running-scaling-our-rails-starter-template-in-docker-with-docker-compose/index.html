@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose">
+    <meta name="keywords" content="rails, template, docker, docker compose, container, microservices, best practices">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html" />
+    <meta property="og:description" content="Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">25 </span>Aug</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Running and Scaling our Rails Starter 'Template' In Docker With Docker Compose</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/jpamaya">Juan Pablo Amaya</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Rails  </a><a href="#">Mongoid  </a><a href="#">Rails  </a><a href="#">Template  </a><a href="#">Best Practices  </a><a href="#">Docker  </a><a href="#">Docker Compose  </a><a href="#">Microservices  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-08-25
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>In a past post we shared a Rails starter template (<a href="http://blog.codescrum.com/2015/07/28/our_rails_starter_template">rails-template</a>) with the minimal bases for building common rails applications. Now we want to show how to run the rails-template inside a <a href="https://www.docker.com/whatisdocker">Docker</a> local machine and be able to do simple scale and load balancing.</p>
+<p>The diagram below shows the architecture of the example. Basically we run one container for the Mongo database, one for the redis store and multiple containers for the Rails application and the Workers (Sidekiq). On top of that is the Nginx load balancer container that acts as a reverse proxy for the rails containers.</p>
+<p><img src="/images/blog/docker_vm.png" alt="Containers in the VM"></p>
+<h2 id="docker-and-docker-compose">Docker and Docker Compose</h2>
+<p>For our experiments with docker we are using <a href="https://docs.docker.com/machine">docker-machine</a>, that let us to create a Docker host on our machine through a Virtualbox VM. We are not going to talk about how to configure Docker on a local machine, but is fairly explained in the <a href="https://docs.docker.com/machine/get-started">Get started with Docker Machine and a local VM</a> guide from the Docker page.</p>
+<p><a href="https://docs.docker.com/compose">Docker Compose</a> is a tool that let us to define and run with just one file a set of docker containers. For our rails-template we are going to define three classes of containers (<em>webapp</em>, <em>webserver</em>, <em>database</em>) and linking together. Docker compose also allows us to do simple scaling up or down of any container that we have defined.</p>
+<h2 id="docker-images">Docker images</h2>
+<p>For each of our container definitions we need some docker images:</p>
+<ul>
+<li>MongoDB database: we are going to use the official <a href="https://hub.docker.com/_/mongo">mongo 3.0</a> image from docker-hub.</li>
+<li>Redis store: we use the official <a href="https://hub.docker.com/_/redis">redis</a> image from docker-hub.</li>
+<li>Nginx proxy: we are going to use the <a href="https://hub.docker.com/r/jwilder/nginx-proxy">Automated Nginx reverse proxy for docker containers</a> from jwilder. This allows us to update and reload the nginx proxy to add/remove servers to be load balanced when new containers are started/stopped.</li>
+<li><p>Rails app: For this we create our own image from the official <a href="https://hub.docker.com/_/ruby">ruby 2.2.2</a> image using this Dockerfile:</p>
+<pre class="highlight"><code class="hljs sql"># Dockerfile
+
+FROM ruby:2.2.2
+# <span class="hljs-operator"><span class="hljs-keyword">Install</span> dependencies.
+RUN apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span> -qq &amp;&amp; apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">install</span> -y build-essential libpq-dev
+# Setup app directory.
+RUN mkdir /myapp
+WORKDIR /myapp
+# Copy the Gemfile <span class="hljs-keyword">and</span> Gemfile.<span class="hljs-keyword">lock</span> <span class="hljs-keyword">into</span> the image <span class="hljs-keyword">and</span> <span class="hljs-keyword">install</span> gems <span class="hljs-keyword">before</span> the project <span class="hljs-keyword">is</span> copied <span class="hljs-keyword">to</span> avoid <span class="hljs-keyword">do</span> bundle <span class="hljs-keyword">install</span> every <span class="hljs-keyword">time</span> <span class="hljs-keyword">some</span> project file <span class="hljs-keyword">change</span>.
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.<span class="hljs-keyword">lock</span> /myapp/Gemfile.<span class="hljs-keyword">lock</span>
+RUN bundle <span class="hljs-keyword">install</span> <span class="hljs-comment">--without development test doc --jobs=4</span>
+# Everything up <span class="hljs-keyword">to</span> here was cached. This includes the bundle <span class="hljs-keyword">install</span>, unless the Gemfiles <span class="hljs-keyword">changed</span>. <span class="hljs-keyword">Now</span> copy the app <span class="hljs-keyword">into</span> the image.
+<span class="hljs-keyword">ADD</span> . /myapp
+# Expose unicorn port.
+EXPOSE <span class="hljs-number">8080</span>
+</span></code></pre></li>
+<li>Worker app: For this we are going to use the same image builded from the Rails app.</li>
+</ul>
+<h2 id="docker-compose-definition">Docker compose definition</h2>
+<p>The docker compose file that define the containers is:</p>
+<pre class="highlight"><code class="hljs haml"># docker-compose.yml
+
+webapp:
+  build: .
+  command: bundle exec unicorn -E production -c config/unicorn.rb
+  volumes:
+    -<span class="ruby"> .<span class="hljs-symbol">:/myapp</span>
+</span>  links:
+    -<span class="ruby"> db
+</span>  env_file: .env
+  environment:
+    RACK_ENV: production
+    RAILS_ENV: production
+    VIRTUAL_HOST: rails-template.docker
+db:
+  image: mongo:3.0
+  command: mongod --smallfiles --quiet
+proxy:
+  image: jwilder/nginx-proxy:latest
+  ports:
+    -<span class="ruby"> <span class="hljs-string">"80:80"</span>
+</span>  volumes:
+    -<span class="ruby"> <span class="hljs-string">"/var/run/docker.sock:/tmp/docker.sock"</span>
+</span>redis:
+  image: redis
+worker:
+  build: .
+  command: bundle exec sidekiq -e production -c 5
+  env_file: .env
+  environment:
+    RAILS_ENV: production
+  links:
+    -<span class="ruby"> db
+</span>    -<span class="ruby"> redis
+</span></code></pre><p>The docker-compose file defines a webapp service that use the image from the <em>Dockerfile</em> of the project. This runs the application through unicorn, and links to the <em>db</em> service. This also sets some environment variables needed by the app, between them one important is the VIRTUAL_HOST environment variable, this is the trick that tells to the <em>proxy</em> service that this container wants to be proxyfied. We use the rails-template.docker as the virtual server name, so we need to add it to the hosts file:</p>
+<pre class="highlight"><code class="hljs nimrod"><span class="hljs-comment"># /etc/hosts</span>
+.
+.
+.
+{docker-machine ip} rails-<span class="hljs-keyword">template</span>.docker
+</code></pre><p>The {docker-machine ip} value is taken from the command:</p>
+<pre class="highlight"><code class="hljs puppet">docker-machine <span class="hljs-literal">ip</span> boot2docker
+</code></pre><p>The <em>db</em> and redis services are self described.</p>
+<p>In the <em>proxy</em> service the only thing to emphasize is that the 80 port is exposed to the host machine to allows to check the application in our local machine</p>
+<p>The <em>worker</em> service links to the <em>db</em> and <em>redis</em> services.</p>
+<h2 id="running-the-containers">Running the containers</h2>
+<p>To be able to run the rails-template in Docker we need to first build or pull the images, we do this with:</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose build
+</code></pre><p>It is going to take some time while it download the images from docker-hub and build our rail image.</p>
+<p>Now we can run the containers with the command:</p>
+<pre class="highlight"><code class="hljs bash">docker-compose up <span class="hljs-operator">-d</span>
+</code></pre><p>The -d option is to run all containers in the background.</p>
+<p>We can check the app in the browser at <a href="http://rails-template.docker">http://rails-template.docker</a></p>
+<p>The Rails application also is configured to run a sidekiq async process that prints the current time every time a request to the app is made, we can see that working with:</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose logs worker
+</code></pre><h2 id="scaling-the-application">Scaling the application</h2>
+<p>Now that we have the application running we can scale the webapp service to 3 replicas and the worker up 2 replicas. We do this with the command:</p>
+<pre class="highlight"><code class="hljs mel">docker-compose <span class="hljs-keyword">scale</span> webapp=<span class="hljs-number">3</span>
+docker-compose <span class="hljs-keyword">scale</span> worker=<span class="hljs-number">2</span>
+</code></pre><p>Now there are two more webapp containers running in the docker machine and be automatically load balanced by the proxy container. We can check this making many requests and by opening the webapp logs:</p>
+<pre class="highlight"><code class="hljs nimrod"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span> curl http://rails-<span class="hljs-keyword">template</span>.docker; echo -----; sleep <span class="hljs-number">1</span>; done;
+</code></pre><p>In other console</p>
+<pre class="highlight"><code class="hljs undefined">docker-compose logs webapp
+</code></pre><pre class="highlight"><code class="hljs undefined">docker-compose logs worker
+</code></pre><p>We would be able to see how the requests are taken by each of the webapp containers and fire a worker background process.</p>
+<p>The example code could be found in this repository: <a href="http://github.com/codescrum/rails-template-docker-compose-example-1">http://github.com/codescrum/rails-template-docker-compose-example-1</a></p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose';
+		window.disqus_identifier = '2015-08-25-running-scaling-our-rails-starter-template-in-docker-with-docker-compose-index';
+		window.disqus_title = 'Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Juan Pablo Amaya</h5><div class="widget-body"><div class="widget-text clearfix"><img src="http://www.gravatar.com/avatar/5d97321569dba6dcb4b5335d99a1e324.png" alt="Juan Pablo Amaya" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Juan is a product developer at CodeScrum - a company dedicated to creating user centric digital services and products. Juan practices continous learning and problem solving.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/25/elasticsearch_rails_and_mongoid/index.html">Elasticsearch, Rails and Mongoid</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html">Deploy your Rails and AngularJS app</a></div><br/><div class="blog-item-related-title"><a href="/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html">Organize your Rails and AngularJS app with Lineman</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

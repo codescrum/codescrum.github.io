@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elasticsearch, Rails and Mongoid</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="Elasticsearch is a search server based on Lucene. we are going to setup Elasticsearch with Rails and Mongoid">
+    <meta name="keywords" content="rails, mongoid, elasticsearch, indexing">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Elasticsearch, Rails and Mongoid" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/06/25/elasticsearch_rails_and_mongoid/index.html" />
+    <meta property="og:description" content="Elasticsearch is a search server based on Lucene. we are going to setup Elasticsearch with Rails and Mongoid" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/06/25/elasticsearch_rails_and_mongoid/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">25 </span>Jun</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Elasticsearch, Rails and Mongoid</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/Johaned">Johan Tique</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Search  </a><a href="#">Mongoid  </a><a href="#">Rails  </a><a href="#">Elasticsearch  </a><a href="#">Indexing  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-06-25
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>In most information systems chances are you will have some kind of data search and filtering features since they are commonly demanded by business processes, the selected tool (or tools) depends on how complex is the search itself. In the Rails domain we have access to several tools: DB through ODM/ORM/O*M tools, <a href="https://github.com/mrkamel/search_cop">Searchcop</a>, <a href="https://github.com/activerecord-hackery/ransack">Ransack</a>, <a href="https://github.com/textacular/textacular">Textacular</a> (only for postgres). However, most of these search tools are dependant on the database directly and perform strict filters which may be limiting for more complex scenarios.</p>
+<p><img src="/images/blog/elasticsearch_rails_mongoid.png" alt="Elasticsearch, Rails and Mongoid"></p>
+<p>The main idea with these post series (this is the first one) is showing how is the integration process between an stable search engine and Rails and how make an advanced filters and searches with the information available in your system.</p>
+<p>Leaving aside the simple and self-integrated solutions for searching, our team was looking for a complete and smooth approach for it. After an analysis for several external options and engines (most of them were old acquaintances) among which were Sphinx, Solr and Elasticssearch (ES) we decided to use Elasticsearch, we were keen about the new interesting features available in its newest versions (like mapping, scoring and boosting functions, scripting support, distributed model support, elegant API and so on), you can find a good comparison for both Solr and ES in this <a href="https://www.loggly.com/blog/loggly-chose-elasticsearch-reliable-scalable-log-management/">post</a> (although it is about a year ago).</p>
+<p>Once we had chosen our engine we needed to explore what would be our ruby client for it, the answer was not difficult to find. Before, we had worked with <a href="https://github.com/karmi/retire">Tire</a>, but it is now deprecated in favor of the <strong><a href="https://github.com/elastic/elasticsearch-rails">elasticsearch-rails</a></strong> gem that is supported by  Elasticsearch and Tire creator itself. Our first impression for this gem was that was pretty complete and stable, and at the end we were right, also the initial integration is pretty straightforward and there are a good post set for explaining this (for example <a href="http://www.codinginthecrease.com/news_article/show/409843">here</a>). We are going to show here the basics for implementing a simple search with elasticsearch and rails using the elasticsearch-rails gem.</p>
+<p>##INSTALLATION</p>
+<p>###Elasticsearch
+In your development environment, you can install the elasticsearch server by using the brew package manager, however if you want a more portable solution (with edge support) you can download the specific version you desire from <a href="https://www.elastic.co/downloads/elasticsearch">here</a>. We will be using version 1.6.0.</p>
+<p>using brew</p>
+<pre class="highlight"><code class="hljs sh">$ brew install elasticsearch
+$ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+</code></pre>
+<p>or downloading directly</p>
+<pre class="highlight"><code class="hljs sh">$ wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>.tar.gz
+$ tar xopf elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>.tar.gz
+$ sh elasticsearch-<span class="hljs-number">1.6</span>.<span class="hljs-number">0</span>/bin/elasticsearch
+</code></pre>
+<p>In order to see if everything is ok you can run the next command (it assumes that the server has a default configuration)</p>
+<pre class="highlight"><code class="hljs sh">$ curl -X GET http://localhost:<span class="hljs-number">9200</span>/
+</code></pre>
+<p>###IN YOUR RAILS APP
+The installation process is pretty simple, you only need to add the correct dependencies in your Gemfile and the correct modules in your model. Also, we are going to deal with some issues and tricks associated with pagination, deployment on heroku, code inspection and a known caveat when using STI.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Gemfile</span>
+<span class="hljs-comment"># ...</span>
+gem <span class="hljs-string">'elasticsearch-model'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'git://github.com/elasticsearch/elasticsearch-rails.git'</span>
+gem <span class="hljs-string">'elasticsearch-rails'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'git://github.com/elasticsearch/elasticsearch-rails.git'</span>
+</code></pre>
+<p>you can see more information about these gems <a href="https://github.com/elastic/elasticsearch-rails#usage">here</a>.</p>
+<p>Once you have added the associated gems, you can configure the elasticsearch url from rails (it will configure the way how Rails will connect to the elasticsearch server), by default the server is on <a href="http://localhost:9200">http://localhost:9200</a>.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-constant">Elasticsearch::Model</span>.client = <span class="hljs-constant">Elasticsearch::Client</span>.new <span class="hljs-symbol">url:</span> <span class="hljs-constant">ENV</span>[<span class="hljs-string">'ELASTICSEARCH_URL'</span>] || <span class="hljs-string">"http://localhost:9200/"</span>
+</code></pre>
+<h2 id="play-with-elasticsearch">PLAY WITH ELASTICSEARCH</h2>
+<p>You can find good articles related with the first inception between elasticsearch and rails <a href="http://aaronvb.com/articles/intro-to-elasticsearch-ruby-on-rails-part-1.html">here</a>. The example on that post plays with ActiveRecord models, however we want to make an example using a NoSQL database (MongoDB in this case), the reason is nothing special, we want to save some time from running migrations and other things that are simpler compared to SQL databases (we understand that for a simple scenarios -learning purpose- the database type is not a big difference). Suppose that we have an existent user model who has a <code>first_name</code>, <code>last_name</code> and <code>email</code> fields.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># app/models/user.rb</span>
+<span class="hljs-comment"># Code extracted from a devise model, also it is using Mongoid 4.0.2 as its ODM</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Mongoid::Document</span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model</span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model::Callbacks</span>
+
+  <span class="hljs-comment"># index name for keeping consistency among existing environments</span>
+  index_name <span class="hljs-string">"users-<span class="hljs-subst">#{<span class="hljs-constant">Rails</span>.env}</span>"</span>
+
+  field <span class="hljs-symbol">:email</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+  field <span class="hljs-symbol">:first_name</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+  field <span class="hljs-symbol">:last_name</span>, <span class="hljs-symbol">type:</span> <span class="hljs-constant">String</span>, <span class="hljs-symbol">default:</span> <span class="hljs-string">""</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>as_indexed_json
+    as_json(<span class="hljs-symbol">except:</span> [<span class="hljs-symbol">:id</span>, <span class="hljs-symbol">:_id</span>])
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>You only need to include <code>Elasticsearch::Model</code> and <code>Elasticsearch::Model::Callbacks</code> modules for getting the default behavior, however if you are going to work with more than one environment you should configure an index name according to the specific environment, you can easily do that calling the index_name method. Finally, you need to create a method named <code>as_indexed_json</code> in your searchable model in order to tell Elasticsearch how the index document will be structured (We will analyze this method in other posts).</p>
+<p>Also, you need to create the Elasticsearch index and perform the first importing process, you can do that inside an initializer file, we are going to reuse our previous initializer:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-constant">Elasticsearch::Model</span>.client = <span class="hljs-constant">Elasticsearch::Client</span>.new <span class="hljs-symbol">url:</span> <span class="hljs-constant">ENV</span>[<span class="hljs-string">'ELASTICSEARCH_URL'</span>] || <span class="hljs-string">"http://localhost:9200/"</span>
+
+<span class="hljs-keyword">unless</span> <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.index_exists?
+  <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+  <span class="hljs-constant">User</span>.import
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>In this way, you can start using the search engine magic, we are going to create some seeds on the <code>User</code> model</p>
+<pre class="highlight"><code class="hljs ruby">user_names = [<span class="hljs-string">'John Doe'</span>, <span class="hljs-string">'Allam Britto'</span>, <span class="hljs-string">'Bob Dylan'</span>, <span class="hljs-string">'Alice Cooper'</span>, <span class="hljs-string">'Alice Pasquini'</span>]
+
+user_names.each <span class="hljs-keyword">do</span> |user_name|
+  user_params = {
+    <span class="hljs-symbol">first_name:</span> user_name.split(<span class="hljs-string">' '</span>).first,
+    <span class="hljs-symbol">last_name:</span> user_name.split(<span class="hljs-string">' '</span>).last,
+    <span class="hljs-symbol">email:</span> <span class="hljs-string">"<span class="hljs-subst">#{user_name.downcase.gsub(<span class="hljs-string">' '</span>, <span class="hljs-string">'.'</span>)}</span>@example.com"</span>,
+    <span class="hljs-symbol">password:</span> <span class="hljs-string">'12345678'</span>
+  }
+  <span class="hljs-constant">User</span>.find_or_create_by user_params
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>And we could to execute some queries, like this</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).count
+<span class="hljs-comment">#=&gt; 1</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).count
+<span class="hljs-comment">#=&gt; 2</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).first
+<span class="hljs-comment">#=&gt; #&lt;Elasticsearch::Model::Response::Result:0x007fc25c52e8a8 <span class="hljs-yardoctag">@result</span>=#&lt;Hashie::Mash _id="558885474a7561a99a010000" _index="users-development" _score=0.15342641 _source=#&lt;Hashie::Mash email="allam.britto<span class="hljs-yardoctag">@example</span>.com" first_name="Allam" last_name="Britto"&gt; _type="user"&gt;&gt;</span>
+</code></pre>
+<p>Also, you have two choices for retrieving your results:</p>
+<ol>
+<li><p><code>#records</code>, this method returns the real instances of your model (it hits the database), it will return a genuine collection of model instances by your database, i.e. ActiveRecord::Relation for ActiveRecord, or Mongoid::Criteria in case of MongoDB (text extracted from the <a href="https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model#search-results-as-database-records">elasticsearch-rails gem</a>).</p>
+</li>
+<li><p><code>#results</code>, this method returns a collection of Elasticsearch objects (gives you information directly, without hitting the database).</p>
+</li>
+</ol>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).records.records.<span class="hljs-keyword">class</span>
+<span class="hljs-comment">#=&gt; Mongoid::Criteria</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'alice'</span>).results.results.<span class="hljs-keyword">class</span>
+<span class="hljs-comment">#=&gt; Array</span>
+</code></pre>
+<p>We issue <code>records.records</code> and <code>results.results</code> instead of just <code>records</code> and <code>results</code> because the first call gives you elasticsearch instances representing the results or records and the second one is to actually fetch them.</p>
+<p>###AWESOME_PRINT AND PRY PROBLEMS?</p>
+<p>We love both debugging and inspecting our applications and the readability is also important for us, if you are using some gem similar to <a href="https://github.com/jkrmr/jazz_hands">jazz_hands</a> or <a href="https://github.com/plribeiro3000/jazz_fingers">jazz_fingers</a> that are related with <strong><a href="https://github.com/michaeldv/awesome_print">awesome_print</a></strong> and you are using <strong>Mongoid</strong> like this example, perhaps you will probably have a problem similar to this:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).first
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.first
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+<span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.to_a
+<span class="hljs-comment">#=&gt; #&lt;NameError: undefined method `to_hash' for class `Elasticsearch::Model::Response::Result'&gt;</span>
+</code></pre>
+<p>In this case, when we try to invoke an output associated with an <code>Array</code> from our <code>Elasticsearch::Model::Response::Result</code> model and our inspecting system is working with <code>awesome_print</code>, our application will break. You can find a full explanation for this problem <a href="https://github.com/elastic/elasticsearch-rails/issues/430">here</a>.</p>
+<p>As you can see in the referenced issue, the solution is pretty simple (actually, it took us nearly 5 hours to debug this obscure thing) and you can make a little monkey patch for solving the problem, first we are going to guarantee that the lib folder is autoloaded by Rails</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/application.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rails::Application</span></span></span>
+  <span class="hljs-comment"># ...</span>
+  <span class="hljs-comment"># Auto-loading lib files</span>
+  config.autoload_paths &lt;&lt; <span class="hljs-constant">Rails</span>.root.join(<span class="hljs-string">'lib'</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Then, we are going to perform our monkey patch using a module strategy (the module will be named <code>Hashable</code>, but it&#39;s just a name we put to it)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># lib/extensions/elasticsearch/model/response/hashable.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Extensions</span></span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Elasticsearch</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Model</span></span>
+      <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Response</span></span>
+        <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Hashable</span></span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># Returns the result object as a plain ruby hash to support awesome_print benefits</span>
+          <span class="hljs-comment"># it allows invoking the Elasticsearch::Model::Response::Result#method(:to_hash) method</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># <span class="hljs-yardoctag">@return</span> [Hash]</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-function"><span class="hljs-keyword">def</span> </span>to_hash
+            <span class="hljs-variable">@result</span>.to_h
+          <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Finally, we are going to reuse our elasticsearch initializer for including our monkey patch</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>? <span class="hljs-constant">Mongoid</span>
+  <span class="hljs-constant">Elasticsearch::Model::Response::Result</span>.<span class="hljs-keyword">include</span> <span class="hljs-constant">Extensions::Elasticsearch::Model::Response::Hashable</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Cool, now we can use a better printer for our command’s output (using <strong>mongoid</strong> and <code>awesome_print</code>)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.search(<span class="hljs-string">'allam'</span>).results.first
+<span class="hljs-comment"># =&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "user",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558885474a7561a99a010000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 0.15342641,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "allam.britto<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Allam",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Britto"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<h3 id="sti-single-table-inheritance-and-document-type-approaches">STI (Single Table Inheritance) AND DOCUMENT TYPE APPROACHES</h3>
+<p>Ok we have just begun, and we already have made some simple searches using the indexing approach from elasticsearch, but what is an index? you can find a great explanation <a href="https://www.elastic.co/blog/what-is-an-elasticsearch-index">here</a>, but essentially an index has two meanings: as a noun and as a verb.</p>
+<ol>
+<li>noun: is the place for storing related documents.</li>
+<li>verb:  is to store a document inside an index (noun) so that it can be retrieved and queried.</li>
+</ol>
+<p>On the Elasticsearch context an index can contain many types. You could map this relation as:</p>
+<p>one Index =&gt; many Types</p>
+<p>one Relational Database =&gt; many Tables</p>
+<p>With this in mind, suppose that we have a new user type and for a business domain reason you need to apply a STI approach, something like this</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># app/model/adviser.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adviser</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">User</span></span></span>
+  <span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Let’s create some dummy data for our new model</p>
+<pre class="highlight"><code class="hljs ruby">adviser_names = [<span class="hljs-string">'Alex Morgan'</span>, <span class="hljs-string">'Nadine Angerer'</span>, <span class="hljs-string">'Michelle Akers'</span>, <span class="hljs-string">'Mia Hamm'</span>, <span class="hljs-string">'Lady Andrade'</span>]
+
+adviser_names.each <span class="hljs-keyword">do</span> |adviser_name|
+  adviser_params = {
+    <span class="hljs-symbol">first_name:</span> adviser_name.split(<span class="hljs-string">' '</span>).first,
+    <span class="hljs-symbol">last_name:</span> adviser_name.split(<span class="hljs-string">' '</span>).last,
+    <span class="hljs-symbol">email:</span> <span class="hljs-string">"<span class="hljs-subst">#{adviser_name.downcase.gsub(<span class="hljs-string">' '</span>, <span class="hljs-string">'.'</span>)}</span>@example.com"</span>,
+    <span class="hljs-symbol">password:</span> <span class="hljs-string">'12345678'</span>
+  }
+  <span class="hljs-constant">Adviser</span>.find_or_create_by adviser_params
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>But what happens when we try to index this model?</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#  "acknowledged" =&gt; true</span>
+<span class="hljs-comment">#}</span>
+<span class="hljs-constant">Adviser</span>.import
+<span class="hljs-comment">#=&gt; SystemStackError: stack level too deep</span>
+</code></pre>
+<p>Unfortunately, it does not work, you can find more information about this problem <a href="https://github.com/elastic/elasticsearch-rails/issues/333#issuecomment-104301909">here</a>, as you can see in the issue the simplest solution is to include the <code>Elasticsearch::Model</code> module once again in the child class. Also we will have to rename the document type taking into account the elasticsearch indexing structure mentioned before.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adviser</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">User</span></span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">Elasticsearch::Model</span>
+
+  index_name <span class="hljs-string">"users-<span class="hljs-subst">#{<span class="hljs-constant">Rails</span>.env}</span>"</span>
+  document_type <span class="hljs-string">"adviser"</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>For importing our new data from the <code>Adviser</code> model to the elasticsearch engine is necessary re-edit our elasticsearch initializer, but before of that we are going to delete our previous user index (you can avoid this step by executing <code>Adviser.import</code> in a rails console)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.client.indices.delete <span class="hljs-symbol">index:</span> <span class="hljs-constant">User</span>.index_name <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+</code></pre>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">unless</span> <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.index_exists?
+  <span class="hljs-constant">User</span>.__elasticsearch_<span class="hljs-number">_</span>.create_index! <span class="hljs-symbol">force:</span> <span class="hljs-keyword">true</span>
+  <span class="hljs-constant">User</span>.import
+  <span class="hljs-constant">Adviser</span>.import
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>With the previous implementation you already can execute searches using the new model (<code>Adviser</code>), yay!</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.search(<span class="hljs-string">'Alex'</span>).first
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "adviser",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558990784a7561240d000000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 0.7554128,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "alex.morgan<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Alex",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Morgan"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<p>Well, now we have a common structure for dealing both the simple searches and the indexing process. What is the next feature we need to deal with? We are going to leave the full searches capabilities for another post <em>inside these post series</em>, for now we are going to deal with the pagination stuff.</p>
+<h3 id="pagination">PAGINATION</h3>
+<p>Pagination is a pretty simple integration which comes with the <a href="https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model#pagination">elasticsearch-rails gem</a>, however this gem has a little problem, always selects the <a href="https://github.com/amatsuda/kaminari">kaminari</a> integration in favor of <a href="https://github.com/mislav/will_paginate">will_paginate</a>. It is not really a critical problem because why should we have both implementations in the same rails project?, but for example, what happens if you like will_paginate but you are also using <a href="https://github.com/sferik/rails_admin">rails_admin</a> (this could be a common scenario that could be repeated with other implemetations as well).</p>
+<p><strong>Rails Admin</strong> uses Kaminari by default and if you want to use the will_paginate integration in your project you will have to override the pagination methods because by default elasticsearch-rails will have integrated with kaminari, you can see more information of this behavior <a href="https://github.com/elastic/elasticsearch-rails/issues/423">here</a>. So, the solution is described in the previous link and is also pretty simple, we only need to include the will_paginate elasticsearch module - we could use an initializer for that - (although this solution is a little dirty it works fine)</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/elasticsearch.rb</span>
+<span class="hljs-comment"># ...</span>
+<span class="hljs-comment"># NOTE: you only need to do that if your rails project has both the kaminari and will_paginate implementations and you want to use will_paginate</span>
+<span class="hljs-constant">Elasticsearch::Model::Response::Response</span>.__send_<span class="hljs-number">_</span> <span class="hljs-symbol">:include</span>, <span class="hljs-constant">Elasticsearch::Model::Response::Pagination::WillPaginate</span>
+</code></pre>
+<p>In the future, perhaps the gem should have an external configurator for this specific feature, for now, we will have to make these tricks.</p>
+<p>Once you have configured your pagination integration (will_paginate in our case) we could execute something similar to this.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Adviser</span>.search({}).paginate(<span class="hljs-symbol">page:</span> <span class="hljs-number">3</span>, <span class="hljs-symbol">per_page:</span> <span class="hljs-number">2</span>).results.first
+<span class="hljs-comment">#=&gt; {</span>
+<span class="hljs-comment">#   "_index" =&gt; "users-development",</span>
+<span class="hljs-comment">#    "_type" =&gt; "adviser",</span>
+<span class="hljs-comment">#      "_id" =&gt; "558990784a7561240d010000",</span>
+<span class="hljs-comment">#   "_score" =&gt; 1.0,</span>
+<span class="hljs-comment">#  "_source" =&gt; {</span>
+<span class="hljs-comment">#         "email" =&gt; "nadine.angerer<span class="hljs-yardoctag">@example</span>.com",</span>
+<span class="hljs-comment">#    "first_name" =&gt; "Nadine",</span>
+<span class="hljs-comment">#     "last_name" =&gt; "Angerer"</span>
+<span class="hljs-comment">#  }</span>
+<span class="hljs-comment">#}</span>
+</code></pre>
+<p>If you don&#39;t do this, you will not get any errors while trying to paginate and it will not actually paginate.</p>
+<h2 id="deploy-to-heroku">DEPLOY TO HEROKU</h2>
+<p>You have a few options for deploying elasticsearch on heroku, however there is a micro plan for free, using an addon named <a href="https://elements.heroku.com/addons/searchbox">SearchBox Elasticsearch</a>. Also we have made an <a href="https://github.com/Johaned/elasticsearch-project">example project</a> in which we develop all the topics covered in this post.</p>
+<p>First, for deploying to Heroku you need to build your application in, then you will have to integrate some necessary addons using your heroku toolbelt (preferably) inside the root project folder.</p>
+<pre class="highlight"><code class="hljs sh">$ heroku addons:create searchbox:starter
+$ heroku addons:create mongolab:sandbox
+$ git push heroku master
+</code></pre>
+<p>Second, you should take into account that with these addons you only can have two indices and the storage is pretty limited, but you should be ok to test with them.</p>
+<h2 id="in-closing">IN CLOSING</h2>
+<p>Beyond these steps, the integration between Rails and Elasticsearch is simple, however there are some tricks for some odd cases (some of them have been explained here) but the integration itself has a lot of benefits and tools for searching and filtering, in the following posts we are going to deal with searches of medium and high complexity. We will return soon!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/06/25/elasticsearch_rails_and_mongoid';
+		window.disqus_identifier = '2015-06-25-elasticsearch-rails-and-mongoid-index';
+		window.disqus_title = 'Elasticsearch, Rails and Mongoid';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Johan Tique</h5><div class="widget-body"><div class="widget-text clearfix"><img src="https://avatars3.githubusercontent.com/u/2193717" alt="Johan Tique" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Johan studied Electronics Engineering, he is chairing the Young Professionals IEEE Program in the region and currently works as Product Engineer at CodeScrum. His specialties include design and development of telematic systems and interactive multimedia. Johan enjoys listening to good music and watching movies.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html">Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</a></div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html">Deploy your Rails and AngularJS app</a></div><br/><div class="blog-item-related-title"><a href="/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html">Organize your Rails and AngularJS app with Lineman</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Poro: :has_one and :has_many associations for your POROs</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="Makes possible the use of has_many, has_one, belongs_to associations in POROs as you would expect">
+    <meta name="keywords" content="open source, ruby">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Active Poro: :has_one and :has_many associations for your POROs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2014/11/21/ActivePoro_brings_associations_to_your_POROs/index.html" />
+    <meta property="og:description" content="Makes possible the use of has_many, has_one, belongs_to associations in POROs as you would expect" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2014/11/21/ActivePoro_brings_associations_to_your_POROs/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">21 </span>Nov</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Active Poro: :has_one and :has_many associations for your POROs</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/gato-omega">Miguel Diaz</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Open source  </a><a href="#">Ruby  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2014-11-21
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>A magical feature of database-backed models is the way objects are linked to one another through associations, setting bidirectional assignments between them.</p>
+<p>Let&#39;s have a quick recap on how <a href="http://guides.rubyonrails.org/association_basics.html">ActiveRecord associations</a> work. These associations let you specify something like.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Driver</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActiveRecord::Base</span></span></span>
+  has_one <span class="hljs-symbol">:car</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActiveRecord::Base</span></span></span>
+  belongs_to <span class="hljs-symbol">:driver</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>If you assign the driver to the car and save, you will magically have the objects linked to one another, like this:</p>
+<pre class="highlight"><code class="hljs ruby">driver = <span class="hljs-constant">Driver</span>.first
+car = <span class="hljs-constant">Car</span>.first
+
+<span class="hljs-comment"># Assign the driver to the car and save</span>
+car.driver = driver
+car.save
+
+<span class="hljs-comment"># Check the bidirectional assignment</span>
+car.driver <span class="hljs-comment">#=&gt; the driver</span>
+driver.car <span class="hljs-comment">#=&gt; the car</span>
+</code></pre>
+<p>This is pretty much taken for granted when dealing with models in <a href="https://github.com/rails/rails">Rails</a> for example, but let&#39;s look at what we have to do when working with simple ruby classes and objects - POROs (Plain Old Ruby Objects).</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Create some simple classes with accessors for each other</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Driver</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:car</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>
+  <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:driver</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># Create two simple objects</span>
+driver = <span class="hljs-constant">Driver</span>.new
+car = <span class="hljs-constant">Car</span>.new
+
+<span class="hljs-comment"># Assign a driver to the car</span>
+car.driver = driver
+
+<span class="hljs-comment"># Check the accessors</span>
+car.driver <span class="hljs-comment">#=&gt; the driver</span>
+driver.car <span class="hljs-comment">#=&gt; nil ... nope, not magically set</span>
+</code></pre>
+<p>If we want for both objects to be &#39;associated&#39;, we must set each to one another explicitly, like this:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Assign a driver to the car AND viceversa</span>
+car.driver = driver
+driver.car = car
+</code></pre>
+<p>Typing that extra line of code seems somewhat annoying when we are actually trying to associate the two objects, and it would be even worse if we were talking about collections of objects.</p>
+<p>##Introducing ActivePoro</p>
+<p>How about writing the following piece of ruby code?</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Driver</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">SomeMagicalModule</span>
+  has_one <span class="hljs-symbol">:car</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">SomeMagicalModule</span>
+  belongs_to <span class="hljs-symbol">:driver</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>With the <a href="https://github.com/codescrum/active_poro"><strong>active_poro</strong></a> gem, you can have exactly this. There are already many gems that do a great job helping with model-like functionality, however, it wasn&#39;t clear how would associations could work for POROs.</p>
+<p>If you want to quickly try this out, check out the following:</p>
+<p>Install the gem</p>
+<pre class="highlight"><code class="hljs bash">gem install active_poro
+</code></pre>
+<p>and now you can do something like</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'active_poro'</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Driver</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">ActivePoro::Model</span>
+  has_one <span class="hljs-symbol">:car</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">ActivePoro::Model</span>
+  belongs_to <span class="hljs-symbol">:driver</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Not only that, but you can also set a _has<em>many</em> association too!</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'active_poro'</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Driver</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">ActivePoro::Model</span>
+  has_many <span class="hljs-symbol">:cars</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-constant">ActivePoro::Model</span>
+  belongs_to <span class="hljs-symbol">:driver</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>When this is set, any objects that you include ActivePoro::Model on will find the reflected association and complete the bidirectional assignment for you. In fact, you only need to include the <em>ActivePoro::Associations</em> module, since its the only thing <a href="https://github.com/codescrum/active_poro">active_poro</a> provides by now.</p>
+<p>From the example above, <a href="https://github.com/codescrum/active_poro">active_poro</a> creates for you some convenience methods for adding and removing associated objects when using a _has<em>many</em> association.</p>
+<pre class="highlight"><code class="hljs ruby">driver = <span class="hljs-constant">Driver</span>.new
+car_A = <span class="hljs-constant">Car</span>.new
+car_B = <span class="hljs-constant">Car</span>.new
+
+driver.cars = [car_A]
+
+driver.add_car car_B
+driver.remove_car car_A
+</code></pre>
+<p>At the time of this writing, we are not proxying the collection so the following would not update the association on both sides</p>
+<pre class="highlight"><code class="hljs ruby">driver.cars &lt;&lt; car_C
+</code></pre>
+<p>However we could implement an invisible proxy to allow these kind of behaviour.</p>
+<p>If you find this useful, be sure to check out the README and source on <a href="https://github.com/codescrum/active_poro">github</a>. We are more than happy to receive your comments below!</p>
+<p>Cheers!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2014/11/21/ActivePoro_brings_associations_to_your_POROs';
+		window.disqus_identifier = '2014-11-21-ActivePoro-brings-associations-to-your-POROs-index';
+		window.disqus_title = 'Active Poro: :has_one and :has_many associations for your POROs';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Miguel Diaz</h5><div class="widget-body"><div class="widget-text clearfix"><img src="https://en.gravatar.com/userimage/37551474/d220b5056cb3d4ee5b444a769ddf364a.jpeg" alt="Miguel Diaz" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Miguel works as technical director at CodeScrum - a company dedicated to creating user centric digital services and products. Miguel enjoys building web applications and services to help businesses improve and do their best.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html">Deploy your Rails and AngularJS app</a></div><br/><div class="blog-item-related-title"><a href="/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html">Organize your Rails and AngularJS app with Lineman</a></div><br/><div class="blog-item-related-title"><a href="/2014/12/16/Microservices_with_RabbitMQ_and_Docker/index.html">Microservices with RabbitMQ and Docker</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Sign On with Devise and Casino</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="A Single Sign On solution with Devise and Casino - with examples!">
+    <meta name="keywords" content="open source, single sign on, ruby, rails, casino, devise">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Single Sign On with Devise and Casino" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html" />
+    <meta property="og:description" content="A Single Sign On solution with Devise and Casino - with examples!" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">31 </span>Mar</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Single Sign On with Devise and Casino</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/jpamaya">Juan Pablo Amaya</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Open source  </a><a href="#">Ruby  </a><a href="#">Rails  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-03-31
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>Nowadays it is very common to deal with multiple distributed services that need a Central Authentication System and a Single Sign In/Out feature.</p>
+<p>In this blog post we will present one of the simplest, yet effective solutions, which is the use of the <a href="http://jasig.github.io/cas/development/protocol/CAS-Protocol-Specification.html">CAS protocol</a>. CAS allows the authentication to be centralized and it is well suited for organizations that already have an existing user base.</p>
+<p>For our actual implementation of CAS SSO we used the <a href="http://casino.rbcas.com">CASino</a> ruby gem. We are going to see how we can integrate this with an existing project using <a href="https://github.com/plataformatec/devise">devise</a> and Rails 3 and 4. The overall single sign on mechanism for our service is shown in the image below.</p>
+<p><img src="/images/blog/sso_diagram.png" alt="Single Sign On diagram"></p>
+<h2 id="casino">CASino</h2>
+<p>First of all lets talk about CASino. CASino is an easy to use Single Sign On (SSO) web application written in ruby. It supports multiple backends and authentication methods through modules called <em>Authenticators</em>.</p>
+<p>They provide a ready to use Rails 3 application called <a href="https://github.com/rbCAS/CASinoApp">CASinoApp</a> that we can download (clone) and configure easily with the instructions provided in their website, which serves as the authentication server. To summarise, we only need to configure a database authenticator to connect with a <em>Users</em> collection in a <em>MongoDB</em> (you can use any other ODM/ORM too) database using the <em>email</em> and <em>password</em> fields in the <em>cas.yml</em> file. For this example we used a third party authenticator to support MongoDB called <a href="https://github.com/digitalnatives/casino-moped_authenticator">casino-moped_authenticator</a>, instead of the default one for ActiveRecord.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># cas.yml</span>
+
+<span class="hljs-symbol">development:</span>
+  <span class="hljs-symbol">frontend:</span>
+    <span class="hljs-symbol">sso_name:</span> <span class="hljs-string">'SSO Example Server'</span>
+    <span class="hljs-symbol">footer_text:</span> <span class="hljs-string">'Powered by &lt;a href="http://rbcas.com/"&gt;CASino&lt;/a&gt;'</span>
+  <span class="hljs-symbol">authenticators:</span>
+     <span class="hljs-symbol">sso_example_database:</span>
+      <span class="hljs-symbol">authenticator:</span> <span class="hljs-string">"Moped"</span>
+      <span class="hljs-symbol">options:</span>
+        <span class="hljs-symbol">database_url:</span> <span class="hljs-string">"mongodb://localhost:27017/sso_example"</span>
+        <span class="hljs-symbol">collection:</span> <span class="hljs-string">"users"</span>
+        <span class="hljs-symbol">username_column:</span> <span class="hljs-string">"email"</span>
+        <span class="hljs-symbol">password_column:</span> <span class="hljs-string">"encrypted_password"</span>
+</code></pre>
+<h2 id="rails-3-example-application">Rails 3 example application</h2>
+<p>To enable the SSO with CAS in a current application using <a href="https://github.com/plataformatec/devise">Devise</a> we use a replacement for the <em>database_authenticatable</em> module of devise called <a href="https://github.com/nbudin/devise_cas_authenticatable">devise_cas_authenticatable</a>. This comes as a gem which we just normally install as usual in our gemfile.</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment">#Gemfile</span>
+<span class="hljs-comment"># devise_cas_authenticatable</span>
+gem <span class="hljs-string">'devise_cas_authenticatable'</span>
+</code></pre>
+<p>Once it is installed we head on to configure the project to use it.</p>
+<h3 id="devise">Devise</h3>
+<p>We need to configure the <em>config/initializers/devise.rb</em> with some already bundled configurations explained in their website, we use:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment">#config/initializers/devise.rb</span>
+<span class="hljs-comment"># ==&gt; Configuration for SSO server authentication</span>
+<span class="hljs-comment"># Url pointing to the CASino SSO server</span>
+config.cas_base_url = <span class="hljs-string">"http://localhost:4000"</span>
+<span class="hljs-comment"># Tell devise_cas_authenticatable not create users if they do not exist</span>
+config.cas_create_user = <span class="hljs-keyword">false</span>
+<span class="hljs-comment"># Instead username we use email for login field</span>
+config.cas_username_column = <span class="hljs-string">"email"</span>
+<span class="hljs-comment"># After logout we use a 'destination' url to be redirected</span>
+config.cas_logout_url_param = <span class="hljs-string">"destination"</span>
+<span class="hljs-comment"># The url for redirect after logout</span>
+config.cas_destination_url = <span class="hljs-string">"http://localhost:3000/"</span>
+<span class="hljs-comment"># Parameter required for CASino logout to work</span>
+config.cas_destination_logout_param_name = <span class="hljs-string">"service"</span>
+<span class="hljs-comment"># Enable single sign out</span>
+config.cas_enable_single_sign_out = <span class="hljs-keyword">true</span>
+</code></pre>
+<h3 id="routes">Routes</h3>
+<p>In the <em>config/routes.rb</em> file we configure the user sessions to use the <em>devise_cas_authenticatable</em> sessions controller.</p>
+<pre class="highlight"><code class="hljs ruby">devise_for <span class="hljs-symbol">:users</span>, <span class="hljs-symbol">:controllers</span> =&gt; {<span class="hljs-symbol">sessions:</span> <span class="hljs-string">'devise/cas_sessions'</span> }
+</code></pre>
+<h3 id="user-model">User model</h3>
+<p>Finally the User model must be modified to avoid the regular database authentication, we replace the database_authenticatable module with cas_authenticatable.</p>
+<pre class="highlight"><code class="hljs ruby">devise <span class="hljs-symbol">:cas_authenticatable</span> <span class="hljs-comment">#, your other devise modules</span>
+</code></pre>
+<h3 id="rails-4-application">Rails 4 application</h3>
+<p>The <em>devise_cas_authenticatable</em> module works with Rails 4 but there are still some issues that need to be resolved.</p>
+<p>First of all we need to override the Devise::CasSessionsController that comes with <em>devise_cas_authenticatable</em></p>
+<p>In the <em>config/routes.rb</em> file:</p>
+<pre class="highlight"><code class="hljs ruby">devise_for <span class="hljs-symbol">:users</span>, <span class="hljs-symbol">skip:</span> [<span class="hljs-symbol">:sessions</span>], <span class="hljs-symbol">controllers:</span> { <span class="hljs-symbol">cas_sessions:</span> <span class="hljs-string">'our_cas_sessions'</span> }
+</code></pre>
+<p>In controllers/our_cas_sessions_controller.rb</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OurCasSessionsController</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Devise::CasSessionsController</span></span></span>
+  <span class="hljs-comment"># Skip redirect_to_sign_in to fix</span>
+  <span class="hljs-comment"># flash message not showing up in Rails 4</span>
+  <span class="hljs-comment"># (https://github.com/nbudin/devise_cas_authenticatable/issues/81)</span>
+
+  skip_before_filter <span class="hljs-symbol">:redirect_to_sign_in</span>,
+  <span class="hljs-symbol">only:</span> [<span class="hljs-symbol">:new</span>, <span class="hljs-symbol">:destroy</span>, <span class="hljs-symbol">:single_sign_out</span>, <span class="hljs-symbol">:service</span>, <span class="hljs-symbol">:unregistered</span>]
+
+  <span class="hljs-comment"># Skip verify_signed_out_user for Devise &gt;= 3.3.0</span>
+  skip_before_filter <span class="hljs-symbol">:verify_signed_out_user</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h2 id="single-sign-out">Single Sign Out</h2>
+<p>The <em>CASino</em> application also supports a Single Sign Out solution, but for this to work we cannot use the default cookie session store mechanism, instead we need to use a persisted session store. For the session store we recommend using <em>redis</em> and the <a href="https://github.com/redis-store/redis-rails">redis-rails</a> gem can help us with this.</p>
+<p>To change the session store in our application we edit the <em>config/initializers/session_store.rb</em> file:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># config/initializers/session_store.rb</span>
+
+<span class="hljs-constant">Rails</span>.application.config.session_store <span class="hljs-symbol">:redis_store</span>,
+<span class="hljs-symbol">redis_server:</span> <span class="hljs-string">"redis://127.0.0.1:6379/0/_sso_rails3_example_app_session"</span>
+</code></pre>
+<p>Note that we have specified the <em>redis_server</em> to use in the initializer file, which will be needed if you plan to use this in a distributed environment.</p>
+<p>For Rails 4 we had another problem with the devise_cas_authenticatable because the <em>DeviseCasAuthenticatable::SingleSignOut</em> module does not work with redis store, for that reason we did a fork of the project and fixed that, so in the <em>Gemfile</em> we change the gem to use the fork:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Gemfile</span>
+
+<span class="hljs-comment"># Use redis to store Rails Sessions</span>
+gem <span class="hljs-string">'redis-rails'</span>
+<span class="hljs-comment"># For CAS authentication with SSO example server</span>
+gem <span class="hljs-string">'devise_cas_authenticatable'</span>, <span class="hljs-symbol">git:</span> <span class="hljs-string">'https://github.com/jpamaya/devise_cas_authenticatable'</span>
+</code></pre>
+<h2 id="wrap-up">Wrap up</h2>
+<p>To test this Single Sign On solutions is better to have at least two client applications configured to see the magic of the Single Sign In and Single Sign Out mechanism. We have prepared three example apps ready for you to try out this already: one with a <a href="https://github.com/codescrum/casino-sso-server-example">casino server example</a> and two others for the client application examples, one for <a href="https://github.com/codescrum/casino-sso-client-rails3-example">Rails 3</a> and another one for <a href="https://github.com/codescrum/casino-sso-client-rails4-example">Rails 4</a>.</p>
+<p>Thats all for now, hope you find this useful as a way of implementing Single Sign On (and Single Sign Out) in a simple way, see you in the next blog post!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/03/31/Single_Sign_On_with_Devise_and_Casino';
+		window.disqus_identifier = '2015-03-31-Single-Sign-On-with-Devise-and-Casino-index';
+		window.disqus_title = 'Single Sign On with Devise and Casino';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Juan Pablo Amaya</h5><div class="widget-body"><div class="widget-text clearfix"><img src="http://www.gravatar.com/avatar/5d97321569dba6dcb4b5335d99a1e324.png" alt="Juan Pablo Amaya" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Juan is a product developer at CodeScrum - a company dedicated to creating user centric digital services and products. Juan practices continous learning and problem solving.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html">Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</a></div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/25/elasticsearch_rails_and_mongoid/index.html">Elasticsearch, Rails and Mongoid</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html">Deploy your Rails and AngularJS app</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

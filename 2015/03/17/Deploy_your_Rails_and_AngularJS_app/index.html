@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deploy your Rails and AngularJS app</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="Deploy a Rails/AngularJS/Lineman app without commiting generated files into source control">
+    <meta name="keywords" content="open source, ruby, rails, api, lineman">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Deploy your Rails and AngularJS app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html" />
+    <meta property="og:description" content="Deploy a Rails/AngularJS/Lineman app without commiting generated files into source control" />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">17 </span>Mar</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Deploy your Rails and AngularJS app</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/gato-omega">Miguel Diaz</a>
+                              
+                              
+                                <!-- Separate authors by comma -->
+                                ,&nbsp;
+                              
+                            
+                              
+                                <a href="https://github.com/degzcs">Diego F. Gomez</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Open source  </a><a href="#">Ruby  </a><a href="#">Rails  </a><a href="#">API  </a><a href="#">Lineman  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-03-17
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>In our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a>, we successfully configured our server-side and client-side applications in a decoupled way in a development environment, but what about deploying on a different environment (i.e. staging, production)?, how would we join our applications together and deploy them as one?.</p>
+<p>Well, there are at least two ways to deploy our application and it basically depends on the following:</p>
+<ol>
+<li>When we have total control of the filesystem of the target server.</li>
+<li>When we don&#39;t (as it occurs with Heroku, because of its Ephemeral Filesystem)</li>
+</ol>
+<p>In any of the cases above we have two other sub-options:</p>
+<p>a. Copy the generated client-side files (i.e. under <code>frontend/dist</code> folder) to the Rails application public folder (or the corresponding assets folder for js, css, etc.) before pushing (the generated files are checked in version control for this to work).</p>
+<p>b. Use lineman on the remote server to build the client application from its source files and copy the generated files to the Rails application to its final location, as in option <em>a</em>.</p>
+<p>If we choose option <em>a</em>, then we can push the bundled-ready-to-operate application to our remote server, provided we have generated all needed files in our development machine and committed the changes.</p>
+<p>On the other hand, if we choose option <em>b</em> we don&#39;t have to commit the generated files, thus reducing the size of the our version-controlled repository, but in contrast, running the generation on the server could take more time and be more complex to setup (since you need nodejs and lineman and all the other things to be able to generate the files).</p>
+<p>Depending on what you need and if you do or do not want to commit generated files in version control, you can choose between these two, so we will leave that to you, but we will present both alternatives.</p>
+<p><strong>Note:</strong> As mentioned earlier these apply to the example app from our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a>.</p>
+<h3 id="generate-the-client-side-application-before-pushing-option-a-">Generate the client-side application before pushing (option <em>a</em>)</h3>
+<p>Let&#39;s assume you have all changes ready, and you wish to push your app to Heroku, but could be other platform or your own server at this point. The steps you would need to perform are the following:</p>
+<p>Generate the frontend app files.</p>
+<pre class="highlight"><code class="hljs sh">$ lineman build
+</code></pre>
+<p>This will generate all the app into the <code>frontend/dist</code> folder. Then, for example, manually (or via a single &quot;cp&quot; line script) copy this folder&#39;s contents into the Rails <code>public</code> folder (which we recommend), or painstakingly copy the corresponding files into each of the <code>assets</code> folders for the asset pipeline to work, which we do not recommend since all the minify, uglify and fingerprinting are already performed by lineman.</p>
+<pre class="highlight"><code class="hljs sh">$ cp -R frontend/dist/* public/
+</code></pre>
+<p>lastly, commit these changes to the repo.</p>
+<pre class="highlight"><code class="hljs sh">$ git commit -am ‘add client application version x.y.z’
+</code></pre>
+<p>In any case we could write a script to do this and later deploy. Note that we will be overriding the generated files each time we deploy, but that&#39;s pretty much it, you app would be deployed without any &quot;special&quot; steps.</p>
+<h3 id="generate-the-client-side-application-after-pushing-option-b-">Generate the client-side application after pushing (option <em>b</em>)</h3>
+<p>As we mentioned before, this process is truly more complex compared to the previous one, but the good news is that there is already the <a href="https://github.com/linemanjs/rails-lineman">rails-lineman</a> gem to helps us deal with this. However we did some tweaks of our own to the gem to improve the possible scenarios for deployment that it could manage. With this option you do not have to commit any generated files, only the source ones.</p>
+<h3 id="overview-of-the-rails-lineman-gem">Overview of the rails-lineman gem</h3>
+<p>Generally speaking, this gem adds the CSS and JS files built by Lineman and adds them to asset pipeline like any other asset in a Rails application. While this is good for some situations where the views are built by Rails and the CSS and JS by Lineman separately, we would like to just be able to copy our generated files without any Rails intervention or dependency on its views.</p>
+<h3 id="improving-the-rails-lineman-gem">Improving the rails-lineman gem</h3>
+<p>For the purpose of exploring the deployment solution we modified the rails-lineman gem adding it a new deployment method, which is just to copy our AngularJS client application to the rails public folder and not use rails assets precompile feature at all, however you can switch to the asset pipeline feature if you want. For now, we have our own fork of the gem <a href="https://github.com/degzcs/rails-lineman">here</a>. The modified gem dynamically generates one of the two following rake tasks, depending on the deployment method you choose:</p>
+<ul>
+<li><p><code>assets:precompile</code> , which adds the client application assets to the Rails asset pipeline flow (if you choose the :asset_pipeline method)</p>
+</li>
+<li><p><code>deploy:frontend</code> which runs Lineman and copy/pastes all files into <code>dist</code> folder to the Rails public folder.</p>
+</li>
+</ul>
+<p>To choose one of the two deployment methods you have to setup your Rails application configuration <code>config/application.rb</code> the <code>deployment_method</code> option, as follows:</p>
+<pre class="highlight"><code class="hljs ruby">config.rails_lineman.deployment_method = <span class="hljs-symbol">:asset_pipeline</span>
+</code></pre>
+<p>or</p>
+<pre class="highlight"><code class="hljs ruby">config.rails_lineman.deployment_method = <span class="hljs-symbol">:copy_files_to_public_folder</span>
+</code></pre>
+<h3 id="deployment-method-processes">Deployment method processes</h3>
+<p>When you choose the :asset_pipeline then the rake task <code>assets:precompile</code> will be overridden by the rails-lineman gem, so the deployment process will be like:</p>
+<ol>
+<li><p>You invoke the command you use to deploy the application to the server (e.g. by using <a href="http://capistranorb.com">Capistrano</a> or by pushing to Heroku or any platform of your choice) this process and setup is up to you.</p>
+</li>
+<li><p>The <code>assets:precompile</code> rake task will be run, which will:</p>
+<ul>
+<li>Install NodeJS and Lineman with npm if not already available (just for Heroku, the gem checks for this particular case).</li>
+<li>Build the client application assets (e.g. css and js files ) using Lineman. The generated output goes to the <code>frontend/dist</code> folder.</li>
+<li>Add the client asset paths from <code>frontend/dist</code> to the Rails asset_path so that they are precompiled together.</li>
+</ul>
+</li>
+<li><p>The Rails app will be started and ready to go!.</p>
+</li>
+</ol>
+<p>On the other hand, when you choose the :copy_files_to_public_folder option the process will be:</p>
+<ol>
+<li><p>You invoke the command you use to deploy the application to the server (e.g. by using <a href="http://capistranorb.com">Capistrano</a> or by pushing to Heroku or any platform of your choice) this process and setup is up to you.</p>
+</li>
+<li><p>The Rails app will be started, and <strong>afterwards</strong> this will happen:</p>
+<ul>
+<li>Install NodeJS and Lineman with npm if not already available (just for Heroku, the gem checks for this particular case).</li>
+<li>Build the client application assets (e.g. css and js files ) using Lineman. The generated output goes to the <code>frontend/dist</code> folder.</li>
+<li>Copy all these generated files to the rails public folder).</li>
+</ul>
+</li>
+</ol>
+<p>Be sure to <em>gitignore</em> the <code>frontend/node_modules</code>, <code>frontend/generated</code> and the <code>frontend/dist</code> folders and be careful to not gitignore all the <code>frontend</code> folder. This way you only have the source files in your version control.</p>
+<h3 id="deploying-the-example-app">Deploying the example app</h3>
+<p>Ok, now that we have explained a little bit about that, let&#39;s continue deploying our example app. We will use the <code>:copy_files_to_public_folder</code> deployment method and deploy to Heroku, where we do not have complete control over our filesystem, so that you can test this without acquiring a dedicated machine.</p>
+<h3 id="heroku">Heroku</h3>
+<p>install <a href="https://github.com/degzcs/rails-lineman">our fork of rails-lineman</a>(version 0.3.1).</p>
+<p>To do so, add to your Gemfile:</p>
+<pre class="highlight"><code class="hljs sh">gem <span class="hljs-string">'rails-lineman'</span>, github: <span class="hljs-string">'degzcs/rails-lineman'</span>
+</code></pre>
+<p>setup/update the <code>config/application.rb</code>, as per the README, like this:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-comment"># Integrate with lineman</span>
+config.rails_lineman.lineman_project_location = <span class="hljs-string">"frontend"</span>
+config.rails_lineman.deployment_method = <span class="hljs-symbol">:copy_files_to_public_folder</span>
+</code></pre>
+<p>Commit all changes and push to Heroku!</p>
+<pre class="highlight"><code class="hljs sh">$ git push heroku master
+</code></pre>
+<p>You can see this app running on heroku <a href="https://rails-angular-lineman-example.herokuapp.com">here</a> and grab the code from <a href="https://github.com/degzcs/rails-angular-lineman-example">here</a>.</p>
+<p><img src="/images/blog/rails_angular_example_3.png" alt="Deployed Rails AngularJS App"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>There are many ways in which you can organize, separate and deploy your project, this is proposed approach way of dealing with this specific technology pairing (AngularJS/Rails). This post plugs in with our <a href="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman">previous post</a> just in case you wonder why we are eperimenting with these deployment methods.</p>
+<p>Other awesome related projects worth checking out are Meteor, Gyoman, Ember, Sails, MEAN, and a bunch of others.</p>
+<p>We hope this information helps you to start with these awesome technologies. See you around!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/03/17/Deploy_your_Rails_and_AngularJS_app';
+		window.disqus_identifier = '2015-03-17-Deploy-your-Rails-and-AngularJS-app-index';
+		window.disqus_title = 'Deploy your Rails and AngularJS app';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Miguel Diaz</h5><div class="widget-body"><div class="widget-text clearfix"><img src="https://en.gravatar.com/userimage/37551474/d220b5056cb3d4ee5b444a769ddf364a.jpeg" alt="Miguel Diaz" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Miguel works as technical director at CodeScrum - a company dedicated to creating user centric digital services and products. Miguel enjoys building web applications and services to help businesses improve and do their best.</div></div></div><div class="widget"><h5 class="widget-title">Diego F. Gomez</h5><div class="widget-body"><div class="widget-text clearfix"><img src="http://www.gravatar.com/avatar/6550a65d1621e01fac9ff7c35725f61f.png" alt="Diego F. Gomez" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Diego is a Product Engineer at Codescrum - a company dedicated to creating user centric digital services and products. Diego always is exploring new ways to give better solutions and improve his skills.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html">Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</a></div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/25/elasticsearch_rails_and_mongoid/index.html">Elasticsearch, Rails and Mongoid</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

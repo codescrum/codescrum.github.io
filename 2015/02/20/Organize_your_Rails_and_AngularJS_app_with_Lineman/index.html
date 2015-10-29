@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organize your Rails and AngularJS app with Lineman</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="In this post we will share our way of organizing a project with Rails and AngularJS using Lineman.">
+    <meta name="keywords" content="open source, ruby, rails, api, lineman">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Organize your Rails and AngularJS app with Lineman" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html" />
+    <meta property="og:description" content="In this post we will share our way of organizing a project with Rails and AngularJS using Lineman." />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">20 </span>Feb</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Organize your Rails and AngularJS app with Lineman</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/gato-omega">Miguel Diaz</a>
+                              
+                              
+                                <!-- Separate authors by comma -->
+                                ,&nbsp;
+                              
+                            
+                              
+                                <a href="https://github.com/degzcs">Diego F. Gomez</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Open source  </a><a href="#">Ruby  </a><a href="#">Rails  </a><a href="#">API  </a><a href="#">Lineman  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2015-02-20
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>Modern (edge) web applications tend to decouple client-side on the browser and server-side as cleanly as possible in order to reuse components for other types of clients (native mobile apps, third party applications and other systems). In this post we will share our way of organizing such a project.</p>
+<p>In short, we wanted to find out what is the best way (it&#39;s our opinion here, there are many &quot;best&quot; ways) to carry out our development workflow using a Rails application as an API and an AngularJS application as a first-class JavaScript enabled frontend web app (pure browser-based client). We want:</p>
+<ul>
+<li>Well organized project structure.</li>
+<li>Totally decoupled Angular frontend from the Rails JSON API backend.</li>
+</ul>
+<p>In our research we found a useful command line called <a href="http://linemanjs.com/">Lineman</a>, which is an utility based on Grunt that makes a basic structure of our client-side application and defines a simple workflow that can be customized. It also comes with cool advanced features one of which is <strong>api proxying</strong>, which allow us to integrate and switch with our server side app (our JSON API) forwarding any requests that it doesn&#39;t know how to respond to, to a proxy service.</p>
+<p>Below, we will show you how to create a basic application to demonstrate the client-server communication of the Lineman-based Angular application with the Rails application backend (using nothing else but JSON) and we will pretend to log into the app with a simple fake authentication mechanism for demonstration purposes.</p>
+<p>So let’s start coding!</p>
+<h2 id="development-environment">Development environment</h2>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<ul>
+<li>Have Ruby installed (we are using Ruby 2.2.0)</li>
+<li>Have Rails installed (we are using Rails 4.1.9)</li>
+<li>Have NodeJS installed (we are using Node 0.10.32)</li>
+</ul>
+<p>Let&#39;s get started by installing Lineman</p>
+<pre class="highlight"><code class="hljs sh">npm install lineman -g
+</code></pre>
+<p>You can create a Lineman-based Angular application from scratch or use this <a href="https://github.com/linemanjs/lineman-angular-template">AngularJS project template</a> available on github which was created by David Mosher. This contains a basic Angular authentication app developed with Lineman. So, we will use this application in our example.</p>
+<p>To start, we will create an application with rails:</p>
+<pre class="highlight"><code class="hljs sh">rails new rails-angular-lineman-example
+</code></pre>
+<p>Then add the angular project from Github inside of this rails project, this will help us to next steps integrate with rails app and deploy easier:</p>
+<pre class="highlight"><code class="hljs sh"><span class="hljs-built_in">cd</span> rails-angular-lineman-example
+git clone https://github.com/linemanjs/lineman-angular-template.git frontend
+<span class="hljs-built_in">cd</span> frontend
+npm install
+</code></pre>
+<p>Project structure should look like this:</p>
+<pre class="highlight"><code class="hljs sh">└── rails-angular-lineman-example
+    ├── app
+    ├── config
+    ...
+    ├── frontend  <span class="hljs-comment"># our frontend/ folder, inside the Rails app</span>
+    ...
+</code></pre>
+<p>Setup your client-side app to use the api proxing feature that we talked about before by going into <code>frontend/config/application.js</code>, to configure your connection to the backend server (i.e. your Rails app) as follows:</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-comment">//...</span>
+server: {
+      pushState: <span class="hljs-literal">false</span>,
+      apiProxy: {
+        enabled: <span class="hljs-literal">true</span>,
+        host: <span class="hljs-string">'localhost'</span>,
+        port: <span class="hljs-number">3000</span>,
+      }
+    }
+<span class="hljs-comment">//...</span>
+</code></pre>
+<p>Also enable Lineman asset fingerprinting feature in this file, as follows:</p>
+<pre class="highlight"><code class="hljs javascript"><span class="hljs-comment">//...</span>
+enableAssetFingerprint: <span class="hljs-literal">true</span>
+<span class="hljs-comment">//...</span>
+</code></pre>
+<p>Moreover, the lineman-angular-template mocks the server-side by default (which is good for developing our application without any backend) but we are going to comment out all lines from <code>frontend/config/server.js</code> so that they do not override the connection to our local Rails server. Now, we will go to our Rails app code and add the &quot;login&quot; and &quot;logout&quot; routes and actions to demo the connection.</p>
+<p>We will update,  <code>app/routes.rb</code> as follows:</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-constant">Rails</span>.application.routes.draw <span class="hljs-keyword">do</span>
+  post <span class="hljs-string">'login'</span> =&gt; <span class="hljs-string">'application#login'</span>
+  post <span class="hljs-string">'logout'</span> =&gt; <span class="hljs-string">'application#logout'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>We will add the corresponding actions to <code>app/controllers/application_controller.rb</code> file</p>
+<pre class="highlight"><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationController</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActionController::Base</span></span></span>
+  <span class="hljs-comment"># Prevent CSRF attacks by raising an exception.</span>
+  <span class="hljs-comment"># For APIs, you may want to use :null_session instead.</span>
+ protect_from_forgery <span class="hljs-symbol">with:</span> <span class="hljs-symbol">:null_session</span> <span class="hljs-comment"># To simplify our demo</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>login
+    render <span class="hljs-symbol">json:</span> { <span class="hljs-symbol">message:</span> <span class="hljs-string">'logging in!'</span> }
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>logout
+    render <span class="hljs-symbol">json:</span>{ <span class="hljs-symbol">message:</span> <span class="hljs-string">'logging out!'</span>}
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Notice that we put <code>protect_from_forgery with: :null_session</code> ( or just <code>protect_from_forgery</code> ) in order to empty the session on requests but doesn&#39;t reset it completely. We did this on purpose and on a later post we will show how to use basic token authentication for this.</p>
+<p>Now back in our client-side app (which is inside the Rails app, under the &quot;frontend&quot; folder), notice that in <code>frontend/app/js/router.js</code> the AngularJS HTML5 mode is enabled, this means that Angular will use regular URLs in modern browsers and Hashbang urls in older ones (e.g. &quot;localhost:8000/logout&quot; instead of &quot;localhost:8000/#/logout&quot;). However, we want to only use Hashbang URLs to avoid raising routing errors in Rails when navigating directly to a url in the address bar of the browser. So, go to <code>frontend/app/js/router.js</code> and change the HTML5 mode to false or comment out the line (same effect) like this:</p>
+<pre class="highlight"><code class="hljs javascript"> <span class="hljs-comment">//...</span>
+ $locationProvider.html5Mode({enabled:<span class="hljs-literal">false</span>});
+ <span class="hljs-comment">//...</span>
+</code></pre>
+<p>Learn more about HTML5 Mode and Hashbang mode <a href="https://docs.angularjs.org/guide/$location">https://docs.angularjs.org/guide/$location</a>.</p>
+<p>Now, it&#39;s time to start our frontend app with Lineman:</p>
+<pre class="highlight"><code class="hljs sh">lineman run
+</code></pre>
+<p>This command will run all development Grunt tasks to generate all the js, css and html files into the <code>frontend/generated</code> folder, also this command starts a server in port 8000 where you can check your application.</p>
+<p>Finally, we start our rails server which just works as the JSON API for our app:</p>
+<pre class="highlight"><code class="hljs sh">bundle <span class="hljs-keyword">exec</span> rails server
+</code></pre>
+<p>Go to <a href="http://localhost:8000">localhost:8000</a>. You can hit login and see how your client interacts with your Rails server for the &quot;/login&quot; and &quot;/logout&quot; routes.</p>
+<p><img src="/images/blog/rails_angular_example_1.png" alt="Microservices example structure"></p>
+<p>And after logging in</p>
+<p><img src="/images/blog/rails_angular_example_2.png" alt="Microservices example structure">
+Cool! right?</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Lineman offers one simple and useful way to organize our project and allow us to decouple our client and server side code. We can take advantage of the many features it provides.</p>
+<p>In our next post we will show you how you can deploy our example to Heroku in an easy way. See you around!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman';
+		window.disqus_identifier = '2015-02-20-Organize-your-Rails-and-AngularJS-app-with-Lineman-index';
+		window.disqus_title = 'Organize your Rails and AngularJS app with Lineman';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Miguel Diaz</h5><div class="widget-body"><div class="widget-text clearfix"><img src="https://en.gravatar.com/userimage/37551474/d220b5056cb3d4ee5b444a769ddf364a.jpeg" alt="Miguel Diaz" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Miguel works as technical director at CodeScrum - a company dedicated to creating user centric digital services and products. Miguel enjoys building web applications and services to help businesses improve and do their best.</div></div></div><div class="widget"><h5 class="widget-title">Diego F. Gomez</h5><div class="widget-body"><div class="widget-text clearfix"><img src="http://www.gravatar.com/avatar/6550a65d1621e01fac9ff7c35725f61f.png" alt="Diego F. Gomez" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Diego is a Product Engineer at Codescrum - a company dedicated to creating user centric digital services and products. Diego always is exploring new ways to give better solutions and improve his skills.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/08/25/running-scaling-our-rails-starter-template-in-docker-with-docker-compose/index.html">Running and Scaling our Rails Starter \'Template\' In Docker With Docker Compose</a></div><br/><div class="blog-item-related-title"><a href="/2015/07/28/our_rails_starter_template/index.html">Our Rails Starter \'Template\'</a></div><br/><div class="blog-item-related-title"><a href="/2015/06/25/elasticsearch_rails_and_mongoid/index.html">Elasticsearch, Rails and Mongoid</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

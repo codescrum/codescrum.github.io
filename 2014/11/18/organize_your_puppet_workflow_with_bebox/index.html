@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organize your Puppet workflow with Bebox</title>
+    <meta name="generator" content="DocPad v6.64.3" />
+    <meta name="description" content="There are many provisioning open source software projects right now that allows us to do the configuration and management of IT infrastructure.">
+    <meta name="keywords" content="open source, devops, ruby">
+    <meta name="author" content="Codescrum">
+    <meta property="og:title" content="Organize your Puppet workflow with Bebox" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://blog.codescrum.com/2014/11/18/organize_your_puppet_workflow_with_bebox/index.html" />
+    <meta property="og:description" content="There are many provisioning open source software projects right now that allows us to do the configuration and management of IT infrastructure." />
+    <meta property="og:image" content="http://blog.codescrum.com/images/og/index.jpg" />
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    
+    <link  rel="stylesheet" href="/stylesheets/c7810a0ec49d9f725632f40d9e39d77c99181905.css" /><link  rel="stylesheet" href="/stylesheets/ee9e95682f733ed446193ed726cca160fa28f53b.css" /><link  rel="stylesheet" href="/stylesheets/d9384b79133953ee2cef26fdbd4e3eafaafaed52.css" /><link  rel="stylesheet" href="/vendor/css/main/78d275681f9a382f38a9480eb976fb5260713aa9.css" /><link  rel="stylesheet" href="/vendor/css/main/3250b223cd4290d914ee41c79b37b56d2db00ad7.css" /><link  rel="stylesheet" href="/vendor/css/main/3f3c44b778f59f714ebf0219fef354c09bdcd568.css" /><link  rel="stylesheet" href="/stylesheets/92fb10ec0eb88a4c9526b8d81f800e668e81c7f1.css" /><link  rel="stylesheet" href="/stylesheets/fonts-styles/4073a0ee7696a19a5119232147546a1d28a364cf.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+</head>
+<body class='cs-blog'>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <b></b>
+    </div>
+    <!-- End Page Loader -->
+    <!-- Page Wrap -->
+    <div class="page">
+        <!-- Navigation panel -->
+        <nav class="main-nav"><div class="full-wrapper relative clearfix"><!-- Logo ( * your text or image into link tag *)--><div class="nav-logo-wrap"><a href="http://www.codescrum.com" class="logo dark"><img src="/images/codescrum_logo.png" width="125" height="27" alt="CodeScrum"/></a></div><div class="mobile-nav"><i class="fa fa-bars"></i></div><div class="nav-social-links right"><a href="http://twitter.com/codescrum" title="Twitter"><i class="fa fa-twitter"></i></a></div></div></nav>
+        <!-- End Navigation panel -->
+        <!-- Heading -->
+        <section class="very-small-section dark-bg image-bg blog-section"><div class="bg-overlay-2"></div><div class="container bg-content"><div class="row"><div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 subcontainer"><div class="top-separator"></div><div class="section-title margin-bot-null"><a href="/">Blog</a></div><div class="row"><div class="col-md-12 col-lg-12 newsletter-container"><!-- Newsletter form--><div class="blog-subscribe-form"><form role="form" action="//codescrum.us9.list-manage.com/subscribe/post?u=6fd48cf9db300c41644cf7393&amp;id=54a1d5e10e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="form-inline"><div class="form-group"><div class="input-group"><label for="mce-EMAIL">&nbsp;Get our&nbsp;<span>newsletter</span></label><input type="email" value="" name="EMAIL" placeholder="Enter your email..." class="email"/><input type="hidden" value="undefined/2014/11/18/organize_your_puppet_workflow_with_bebox/index.html" name="SIGNUP_URL"/><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default">Subscribe</button></div></div></form></div><!-- End Newsletter form--></div></div></div></div></div></section>
+        <!-- End Heading -->
+        <!-- Blog Container -->
+        <div class="container blog-container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-sm-7 col-sm-offset-1">
+                    <!-- Post -->
+                    <div class="blog-item">
+                        <!-- Date -->
+                        <div class="blog-item-date"><span class="date-num">18 </span>Nov</div>
+                        <!-- Post Title -->
+                        <h1 class="blog-item-title animate">Organize your Puppet workflow with Bebox</h1>
+                        <!-- Author, Categories -->
+                        <div class="blog-item-data">
+                            Posted by
+                            
+                              
+                                <a href="http://github.com/jpamaya">Juan Pablo Amaya</a>
+                              
+                              
+                            
+                            <span class="separator">&mdash;</span>
+                            <a href="#">Open source  </a><a href="#">DevOps  </a><a href="#">Ruby  </a>
+                        </div>
+                        <!-- Latest Update -->
+                        <div class="blog-last-update-data">
+                            Last update on 2014-11-18
+                        </div>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                        <!-- Text Body -->
+                        <div class="blog-item-body">
+                            <p>##The problem</p>
+<p>There are many provisioning open source software projects right now that allows us to do the configuration and management of IT infrastructure. Of all the tools availble, here in Codescrum, we decided to work in some of our projects with the open source version of <a href="http://puppetlabs.com/puppet/puppet-open-source">Puppet</a>.</p>
+<p><a href="http://puppetlabs.com/puppet/puppet-open-source">Puppet</a> is an infrastructure automation tool for provisioning environments.</p>
+<p>##What we did</p>
+<p>While working with Puppet, we noticed that we needed an &quot;opinionated&quot; way of organizing all those files and folders to make our lives easier. That is a repetitive task that is prone to errors and delays. Thats why we built <a href="https://github.com/codescrum/bebox">Bebox</a>.</p>
+<p><a href="https://github.com/codescrum/bebox">Bebox</a> lets us organize and automatically generate a provisioning structure for our projects through a command line application.</p>
+<p>Bebox&#39;s workflow is made up of five (5) phases.These phases are:</p>
+<ol>
+<li>Project creation</li>
+<li>Environment definition</li>
+<li>Node allocation</li>
+<li>Node preparation</li>
+<li>Node provisioning</li>
+</ol>
+<p>All phases have their own set of commands and execute some action through simple wizards that receive input from the user.</p>
+<p>The idea here is that all Puppet repositories look alike in our company and that we know where to search for certain things. This gives us the following benefits:</p>
+<ul>
+<li>Reduces the steps to build and reproduce a production-like environment in our machines</li>
+<li>Helps us &quot;incubate&quot; Puppet modules, prior to being extracted into independent modules</li>
+<li>Have a consistent mechanism for reproducing a Puppet-based project</li>
+<li>Apply layers of configuration to managed systems</li>
+<li>Simplify sequential provisioning steps</li>
+</ul>
+<p>##The workflow</p>
+<p>Bebox’s workflow is comprised of the five (5) phases explained below:</p>
+<p><img src="/images/blog/bebox_workflow.png" alt="bebox workflow"></p>
+<p>###Project creation</p>
+<p>In this phase, we use Bebox to generate an initial skeleton within a project folder (just like Rails does) for the configuration access/deployment and a Puppet structure for puppet&#39;s resources.</p>
+<pre class="highlight"><code class="hljs elixir"><span class="hljs-variable">$ </span>bebox new <span class="hljs-constant">PROJECT_NAME</span>
+<span class="hljs-variable">$ </span>cd <span class="hljs-constant">PROJECT_NAME</span>
+</code></pre><p>###Environment definition</p>
+<p>After the project structure is created we can use Bebox&#39;s CLI to further customize any number of deployment environments. By default Bebox sets up boilerplate for production, staging and vagrant (&#39;vagrant&#39; is like &#39;development&#39;, but we named it differently since it is a kind of a &quot;local production&quot;). Bebox uses <a href="https://www.vagrantup.com">Vagrant</a> to run the provisioning in a virtual machine hosted in the local machine, and configures these machines in the default &quot;vagrant&quot; environment.</p>
+<p>Some useful commands for managing the environments and setup folder structures and files for this are:</p>
+<pre class="highlight"><code class="hljs elixir"><span class="hljs-variable">$ </span>bebox environment new <span class="hljs-constant">ENVIRONMENT</span>
+<span class="hljs-variable">$ </span>bebox environment remove <span class="hljs-constant">ENVIRONMENT</span>
+<span class="hljs-variable">$ </span>bebox environment list
+</code></pre><p>Note: we run the commands above inside the project directory.</p>
+<p>###Node allocation</p>
+<p>A node for bebox is any machine needed by the service that needs provisioning. A service can be composed of any number of nodes, at least one (1). For example a service can have a machine for the web application, another machine for the database backend and a third one for a replica of the database. The nodes can be configured for each environment and are basically defined by their hostname and IP address.</p>
+<p>Some useful commands for managing nodes and setup folder structures and files for this are:</p>
+<pre class="highlight"><code class="hljs puppet">$ bebox <span class="hljs-keyword">node</span> new
+$ bebox <span class="hljs-keyword">node</span> remove
+$ bebox <span class="hljs-keyword">node</span> list [--<span class="hljs-literal">environment</span> <span class="hljs-constant">E</span>NVIRONMENT] [--all]
+</code></pre><p>Note:  wizards will ask for any information needed to conclude the command.</p>
+<p>###Node preparation</p>
+<p>This step executes the installation of Puppet in the remote (or local) machines. To access the machines, Bebox has a directory to configure the ssh keys used for each environment. For the &quot;vagrant&quot; environment, the virtual machines are created automatically by Bebox.</p>
+<pre class="highlight"><code class="hljs sql">$ bebox <span class="hljs-operator"><span class="hljs-keyword">prepare</span> [<span class="hljs-comment">--environment ENVIRONMENT]</span>
+</span></code></pre><p>###Node Provisioning</p>
+<p>Based on our experience working with Puppet, we separate this phase into four (4) common steps that define clear layers of configuration, but the user can add or remove any step at will. Based on our particular experience, we named these steps: fundamental, users layer, service layer and security layer.</p>
+<pre class="highlight"><code class="hljs css">$ <span class="hljs-tag">bebox</span> <span class="hljs-tag">apply</span> <span class="hljs-attr_selector">[STEP]</span> <span class="hljs-attr_selector">[--environment ENVIRONMENT]</span> <span class="hljs-attr_selector">[--all]</span>
+</code></pre><p>####Fundamental step</p>
+<p>This step creates a &quot;puppet&quot; user account that would be used to execute all other provisioning steps. This is done to have all environments as similar as possible, because in some systems the superuser is known as ‘root’ while in others like vagrant is named ‘vagrant’.</p>
+<p>####User layer step</p>
+<p>Any system user that is needed to exist before any service level provisioning, can be created in this step.</p>
+<p>####Service layer step</p>
+<p>The service layer is what you would have in your regular puppet provisioning repo. We follow the <a href="http://www.craigdunn.org/2012/05/239/">roles and profiles scheme</a> for better organization of the Puppet manifests declaration.</p>
+<p>A list of the commands used when in this phase, following the roles and profiles scheme:</p>
+<pre class="highlight"><code class="hljs elixir"><span class="hljs-variable">$ </span>bebox role new <span class="hljs-constant">ROLE</span>
+<span class="hljs-variable">$ </span>bebox role remove <span class="hljs-constant">ROLE</span>
+<span class="hljs-variable">$ </span>bebox role list
+<span class="hljs-variable">$ </span>bebox profile new <span class="hljs-constant">PROFILE </span>[-p <span class="hljs-constant">PATH]</span>
+<span class="hljs-variable">$ </span>bebox profile remove
+<span class="hljs-variable">$ </span>bebox profile list
+<span class="hljs-variable">$ </span>bebox role add_profile
+<span class="hljs-variable">$ </span>bebox role remove_profile
+<span class="hljs-variable">$ </span>bebox role list_profiles <span class="hljs-constant">ROLE</span>
+<span class="hljs-variable">$ </span>bebox node set_role [--environment <span class="hljs-constant">ENVIRONMENT]</span>
+</code></pre><p>####Security layer step</p>
+<p>Finally, after all services are running and configured we can secure them and add extra security tools to the OS (by default we install fail2ban, sysctl, firewall, and some secure settings to ssh).</p>
+<p>##Conclusion</p>
+<p>Keeping a reproducible environment is always difficult. While most of the job is performed by the selected automation tool (in this case, Puppet), there is always room for little optimizations depending on your workflow.</p>
+<p>With <a href="https://github.com/codescrum/bebox">Bebox</a>, we mostly care about your <a href="http://puppetlabs.com/puppet/puppet-open-source">Puppet</a> code without worrying about all the other tasks around it. We think that Bebox can help you organize and reuse configuration between projects and save you time for the actual provisioning.</p>
+<p>Let us know in the comments if you find this tool useful!</p>
+
+                        </div>
+                        <!-- Disqus -->
+                        <div id="disqus_thread"></div>
+<script>
+	(function(){
+		window.disqus_shortname = 'codescrumblog';
+		window.disqus_developer = '1';
+		window.disqus_url = 'http://blog.codescrum.com/2014/11/18/organize_your_puppet_workflow_with_bebox';
+		window.disqus_identifier = '2014-11-18-organize-your-puppet-workflow-with-bebox-index';
+		window.disqus_title = 'Organize your Puppet workflow with Bebox';
+		if ( window.DISQUS ) {
+			return DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.identifier = window.disqus_identifier;
+					this.page.url = window.disqus_url;
+					this.page.title = window.disqus_title;
+				}
+			});
+		}
+		else {
+		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        <!-- End Disqus -->
+                    </div>
+                    <!-- End Post -->
+                </div>
+                <!-- End Content -->
+                <!-- Post Sidebar--><div class="col-sm-3 col-sm-offset-1 sidebar"><!-- Widget--><div class="widget"><h5 class="widget-title">Juan Pablo Amaya</h5><div class="widget-body"><div class="widget-text clearfix"><img src="http://www.gravatar.com/avatar/5d97321569dba6dcb4b5335d99a1e324.png" alt="Juan Pablo Amaya" width="70" height="70" style="margin: 0 10px 10px 0;" class="img-circle left"/>Juan is a product developer at CodeScrum - a company dedicated to creating user centric digital services and products. Juan practices continous learning and problem solving.</div></div></div><!-- End Widget--><div class="related-title">Related posts</div><br/><div class="blog-item-related-title"><a href="/2015/10/29/great-conferences-and-great-country-at-rubyconf-and-jsconf-colombia-2015/index.html">Great conferences and great country at RubyConf and JSConf Colombia 2015</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/31/Single_Sign_On_with_Devise_and_Casino/index.html">Single Sign On with Devise and Casino</a></div><br/><div class="blog-item-related-title"><a href="/2015/03/17/Deploy_your_Rails_and_AngularJS_app/index.html">Deploy your Rails and AngularJS app</a></div><br/><div class="blog-item-related-title"><a href="/2015/02/20/Organize_your_Rails_and_AngularJS_app_with_Lineman/index.html">Organize your Rails and AngularJS app with Lineman</a></div><br/><div class="blog-item-related-title"><a href="/2014/12/16/Microservices_with_RabbitMQ_and_Docker/index.html">Microservices with RabbitMQ and Docker</a></div><br/></div><!-- End Post Sidebar-->
+            </div>
+        </div>
+        <!-- End Blog Container -->
+    </div>
+    <!-- End Page Wrap -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='/vendor/js/main/743052320809514fb788fe1d3df37fc87ce90452.js'></script>
+<script src='/vendor/js/main/2725ed6948f181eeb10d53f015c2d05930c3f2bf.js'></script>
+<script src='/vendor/js/main/064db532ad5ab785d14df62d7b079718d1455878.js'></script>
+<script src='/vendor/js/main/049518cbf4e734533ed649a723d0f98e65ddbeeb.js'></script>
+<script src='/vendor/js/main/bd452624a78584ce51236958e8fddd59e9256164.js'></script>
+<script src='/vendor/js/main/500935bda0e7fe800266206c5d2a40e1392815fa.js'></script>
+<script src='/vendor/js/main/14e2c5a570cbaff9ab7d646205ef4358b24cdbbe.js'></script>
+<script src='/vendor/js/main/a0707a1c3a7e9450ae3ddd967bcfa0158ca84503.js'></script>
+<script src='/vendor/js/main/10898d5125a423e3bd7503f90036b8d51886c466.js'></script>
+<script src='/vendor/js/main/8780150ad727c07e8d6e2cc1a3d0ad1336ea05c5.js'></script>
+<script src='/vendor/js/main/f6edff08778dd27a0c697971298313250316de52.js'></script>
+<script src='/vendor/js/main/31466d8c264cb8886ce7890fb17bd0cfc7d7cad6.js'></script>
+<script src='/vendor/js/main/0d9ee59f102516b1a988490f27ed37440713cc8b.js'></script>
+<script src='/vendor/js/main/f436db7bcccd473aac7a1e48f8b17157516c8cbd.js'></script>
+<script src='/vendor/js/main/1a7a09b58cfabcea60eb3d146c5f204ec847c882.js'></script>
+<script src='/vendor/js/main/9a149e697cfe224d4763efce3db2a7630d18f386.js'></script>
+<script src='/vendor/js/main/08092373bfbdb7924dd01795779e171e66f038cd.js'></script>
+    <script src='/vendor/js/yoxview/jquery.yoxview-2.21.min.js'></script>
+    
+        <!-- KISSmetrics tracking snippet -->
+        <script type="text/javascript">var _kmq = _kmq || [];
+        var _kmk = _kmk || 'b3a021f3ec64bea8289882e29204f8c7f463a3a3';
+        function _kms(u){
+          setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+            s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+          }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+        </script>
+        <script type="text/javascript">
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=89050454&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+    
+    <script src='/javascripts/4bf0786b93aed857ac68131e89c19f228027b64c.js'></script>
+<script src='/javascripts/0e6ecd21171748e6d213df95feeeca1c10cf4ee3.js'></script>
+<script src='/javascripts/d7627436de24c739864977c0851ebd879deafc4e.js'></script>
+<script src='/javascripts/07cced7963a9035b9abe47f2b7b9cc0091acef96.js'></script>
+    <!--[if lt IE 10]><script src="vendor/main/js/placeholder.js"></script><![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-546fc9e60b37b66e" async="async"></script>
+    <script >(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-32185144-1');
+ga('send', 'pageview');</script>
+    <script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
+</body>
+</html>

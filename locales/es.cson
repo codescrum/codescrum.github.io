@@ -1,0 +1,42 @@
+es:
+  _name: "Español"
+  _param: "es_CO"
+  blog:
+    authors:
+      jairo_diaz:
+        name: "Jairo Diaz"
+        image: "http://media.licdn.com/media/p/7/000/1c7/162/0e09e41.jpg"
+        profile_link: "http://www.linkedin.com/in/4diaz"
+        description: "Jairo is the founder and managing director of CodeScrum Ltd - a company dedicated to creating user centric digital
+                      services and products. Our clients include government agencies, newspapers, universities, retail businesses,
+                      charities and leading startups."
+      jp_amaya:
+        name: "Juan Pablo Amaya"
+        image: "http://www.gravatar.com/avatar/5d97321569dba6dcb4b5335d99a1e324.png"
+        profile_link: "http://github.com/jpamaya"
+        description: "Juan is a product developer at CodeScrum - a company dedicated to creating user centric digital
+                      services and products. Juan practices continous learning and problem solving."
+
+      miguel_diaz:
+        name: "Miguel Diaz"
+        image: "https://en.gravatar.com/userimage/37551474/d220b5056cb3d4ee5b444a769ddf364a.jpeg"
+        profile_link: "http://github.com/gato-omega"
+        description: "Miguel works as technical director at CodeScrum - a company dedicated to creating user centric digital
+                      services and products. Miguel enjoys building web applications and services to help businesses improve and do their best."
+      johan_tique:
+        name: "Johan Tique"
+        image: "https://avatars3.githubusercontent.com/u/2193717"
+        profile_link: "http://github.com/Johaned"
+        description: "Johan studied Electronics Engineering, he is chairing the Young Professionals IEEE Program in the region and currently works as Product Engineer at CodeScrum. His specialties include design and development of telematic systems and interactive multimedia. Johan enjoys listening to good music and watching movies."
+
+      diego_gomez:
+        name: "Diego F. Gomez"
+        image: "http://www.gravatar.com/avatar/6550a65d1621e01fac9ff7c35725f61f.png"
+        profile_link: "https://github.com/degzcs"
+        description: "Diego is a Product Engineer at Codescrum - a company dedicated to creating user centric digital services and products. Diego always is exploring new ways to give better solutions and improve his skills."
+
+      chris_kim:
+          name: "Chris Kim"
+          image: "https://avatars0.githubusercontent.com/u/1328490"
+          profile_link: "https://github.com/cj3kim"
+          description: "Chris is passionate about pushing out great products with well-tested code. He loves helping out his clients with their projects and is stimulated by the dailiy challenges mobile and web development provide."
