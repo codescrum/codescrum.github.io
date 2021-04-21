@@ -1,0 +1,294 @@
+
+.btn-primary {
+    color: #f5f5f5;
+    background-color: #F05F40;
+    border-color: #F05F40;
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    transition: all 0.55s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #F05F40;
+    border-color: #F05F40;
+    background-color: #f5f5f5;
+}
+
+.btn-default {
+    color: #F05F40;
+    border: 1px solid #F05F40;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    transition: all 0.55s ease;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open>.dropdown-toggle.btn-default {
+    color: #f5f5f5;
+    border-color: #F05F40;
+    background-color: #F05F40;
+}
+
+#codescrum-hero {
+    background-image: url('/images/background/pexels-photo-416617.jpg');
+}
+
+#codescrum-hero .overlay {
+    width: 100%;
+    display: flex;
+    min-height: auto;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0000', endColorstr='#60000', GradientType=0);
+}
+
+#codescrum-hero .header-content-inner img {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 25px;
+    max-height: 140px;
+    margin-bottom: 0;
+}
+
+#codescrum-hero .header-content-title:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 50%;
+    top: -30px;
+    width: 1px;
+    height: 30px;
+    background: #fff;
+    transform: translate(-50%);
+}
+
+#codescrum-hero .header-content-inner .header-content-title {
+    position: relative;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    max-width: 75%;
+    padding: 40px 0;
+    margin: 30px auto;
+}
+
+#codescrum-hero .header-content-inner .header-content-title h1 {
+    margin: -25px 0;
+    font-size: 115px;
+    letter-spacing: 1px;
+}
+
+#codescrum-hero .header-content-inner .header-content-title p {
+    color: #fff;
+    /* font-size: 45px; */
+    font-size: 34px;
+    line-height: 1.4;
+    margin-bottom: 0px;
+}
+
+/* #codescrum-hero .header-content-inner .header-content-title hr {
+    margin: 10px auto;
+} */
+
+#codescrum-hero .header-content-inner p {
+    margin-bottom: 20px;
+}
+
+/* @media (min-width: 768px) {
+    #codescrum-hero .header-content-inner h1 {
+        font-size: 50px;
+    }
+}*/
+
+@media (min-width: 768px) {
+    #codescrum-hero,
+    #codescrum-hero .overlay {
+        min-height: 100vh;
+    }
+}
+
+.col-md-4:nth-child(3n+1) {
+    clear: left;
+}
+
+figcaption .feature-circle-stripped {
+    background-image: url(/images/raster@2x.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    color: #f5f5f5;
+    font-size: 45px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    /* border: 1px solid #cccccc; */
+    transition: all 0.3s;
+    background: #f05f40;
+}
+
+figcaption .line-icons:hover .feature-circle-stripped {
+    transform: rotateY(180deg);
+    border: 1px solid #cccccc;
+    background: #fff;
+    color: #111;
+}
+
+.feature .feature-square {
+    min-height: 340px;
+    /* border: 1px solid #cccccc; */
+    margin: 20px 0px;
+    padding: 30px 20px;
+    /* border-radius: 6px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.feature .feature-square span.fa {
+    position: absolute;
+    font-size: 4.5em;
+    font-weight: bold;
+    left: 45px;
+    /* bottom: -75px; */
+    opacity: 0.8;
+    color: #f05f40;
+    /* transform: rotate(25deg); */
+    top: 30px;
+    z-index: -1;
+}
+
+.feature .feature-square span.fa [class*=" devicon-"],
+.feature .feature-square span.fa [class^=devicon-],
+.feature .feature-square span.fa [class^="et-"],
+.feature .feature-square span.fa [class*=" et-"] {
+    line-height: inherit;
+}
+
+.feature-square p.h-o {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.feature-square p:not(.h-o) {
+    font-size: 17px;
+    color: #cccccc;
+}
+
+/* .feature:not(:nth-child(3n)) .feature-square:after {
+    position: absolute;
+    display: block;
+    content: '';
+    right: -45px;
+    top: 50%;    
+    width: 90px;
+    height: 1px;
+    background: #cccccc;
+    transform: translate(0, -50%);
+    box-shadow: 20px 20px 10px 0px #f05f40;
+}
+.feature:nth-child(6) .feature-square:before,
+.feature:nth-child(7) .feature-square:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 50%;
+    top: -30px;    
+    width: 1px;
+    height: 60px;
+    background: #cccccc;
+    transform: translate(-50%);
+    box-shadow: 20px 20px 10px 0px #f05f40;
+} */
+
+#codescrum-contact {
+    background-image: none;
+}
+
+#codescrum-contact .form-group input,
+#codescrum-contact .form-group select,
+#codescrum-contact .form-group textarea {
+    color: #605e5e;
+    border: solid 1px #cccccc;
+    padding-left: 10px;
+}
+
+#codescrum-contact .form-group input:focus,
+#codescrum-contact .form-group select:focus,
+#codescrum-contact .form-group textarea:focus {
+    outline: none !important;
+    border: 1px solid #605e5e;
+    border-left: 1px solid #605e5e;
+}
+
+#codescrum-contact .form-group .help-block.with-errors ul li {
+    font-size: 13px;
+    line-height: 24px;
+    color: #f3ab9e;
+    padding-left: 10px;
+    letter-spacing: 0.03em;
+}
+
+#codescrum-contact .form-group ul.checkbox-regular {
+    justify-content: center;
+}
+
+#codescrum-contact button {
+    width: 40%;
+}
+
+#codescrum-contact ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: rgba(96, 94, 94, 0.7);
+}
+
+#codescrum-contact :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(96, 94, 94, 0.7);
+}
+
+#codescrum-contact ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(96, 94, 94, 0.7);
+}
+
+#codescrum-contact :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(96, 94, 94, 0.7);
+}
+
+#codescrum-contact ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(96, 94, 94, 0.7);
+}
+
+#codescrum-gdpr {
+    background-image: url('/images/background/pexels-photo-577560.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -5;
+}
+
+#codescrum-gdpr .overlay {
+    width: 100%;
+    display: flex;
+    min-height: auto;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0000', endColorstr='#60000', GradientType=0);
+}
+
+/*# sourceMappingURL=gdpr.css.map*/
